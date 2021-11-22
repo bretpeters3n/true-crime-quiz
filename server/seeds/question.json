@@ -1,0 +1,12 @@
+[
+    {
+        "question": "Who was ted bundy?",
+        "options": ["a", "b", "c", "d"],
+        "answer": "a"
+    },
+    {
+        "question": "Who was son of sam?",
+        "options": ["a", "b", "c", "d"],
+        "answer": "a"
+    }
+]
