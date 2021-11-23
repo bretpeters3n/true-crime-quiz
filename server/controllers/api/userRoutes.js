@@ -14,7 +14,7 @@ router.get("/all", (req, res) => {
 });
 
 router.get("/:id", ({ params }, res) => {
-    User.find(
+    User.findById(
         {
             _id: mongojs.ObjectId(params.id)
         })
@@ -39,7 +39,7 @@ router.post("/new", ({ body }, res) => {
 });
 
 router.put("/update/:id", (req, res) => {
-    const user = req.body; 
+    const user = req.body;
     User.findByIdAndUpdate(
         {
             _id: mongojs.ObjectId(req.params.id)
@@ -60,22 +60,16 @@ router.put("/update/:id", (req, res) => {
     );
 });
 
-router.put("/delete/:id", (req, res) => {
-    const user = req.body; 
-    User.findByIdAndUpdate(
+router.delete("/delete/:id", (req, res) => {
+    User.findByIdAndDelete(
         {
             _id: mongojs.ObjectId(req.params.id)
         },
-        {
-            $set: user
-        },
-
         (error, edited) => {
             if (error) {
                 console.log(error);
                 res.send(error);
             } else {
-                console.log(edited);
                 res.send(edited);
             }
         }
