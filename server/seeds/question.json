@@ -1,21 +1,46 @@
 [
     {
-        "question": "Who was ted bundy?",
-        "options": ["a", "b", "c", "d"],
-        "answer": "a",
+        "questionText": "What is the capital of New York?",
+        "answerOptions": [
+            {
+                "answerText": "Chicago",
+                "isCorrect": false
+            },
+            {
+                "answerText": "LA",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Houston",
+                "isCorrect": false
+            },
+            {
+                "answerText": "New York",
+                "isCorrect": true
+            }
+        ],
         "user_id": "619bfa173ce385651d66c52f"
     },
     {
-        "question": "Who was son of sam?",
-        "options": ["a", "b", "c", "d"],
-        "answer": "a",
-        "user_id": "619bfa173ce385651d66c52f"
-    },
-
-    {
-        "question": "testing the user id",
-        "options": ["a", "b", "c", "d"],
-        "answer": "a",
+        "questionText": "What is the capital of France?",
+        "answerOptions": [
+            {
+                "answerText": "Paris",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Cinncinati",
+                "isCorrect": false
+            },
+            {
+                "answerText": "New York",
+                "isCorrect": false
+            },
+            {
+                "answerText": "London",
+                "isCorrect": false
+            }
+        ],
         "user_id": "619bfa173ce385651d66c52f"
     }
 ]
