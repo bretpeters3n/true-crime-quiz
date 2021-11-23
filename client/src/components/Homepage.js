@@ -1,6 +1,7 @@
 import * as React from "react";
 // import ReactDOM from "react-dom";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 export default function Homepage() {
   return (
@@ -10,7 +11,9 @@ export default function Homepage() {
           <div className="align-vertical">
             Let's get started.
             <br />
-            <Button variant="contained">Start Game!</Button>
+            <Link to="/game">
+              <Button variant="contained">Start Game!</Button>
+            </Link>
           </div>
         </div>
       </div>
