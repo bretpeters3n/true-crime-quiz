@@ -10,7 +10,19 @@ router.get("/all", (req, res) => {
         .catch(err => {
             res.json(err);
         });
-})
+});
+
+router.post("/new", ({ body }, res) => {
+    const user = body;
+
+    Question.create(user, (error, saved) => {
+        if (error) {
+            console.log(error);
+        } else {
+            res.send(saved);
+        }
+    });
+});
 
 
 module.exports = router;
