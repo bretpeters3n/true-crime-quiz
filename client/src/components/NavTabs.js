@@ -22,14 +22,14 @@ function NavTabs({ currentPage, handlePageChange }) {
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">
-              Offcanvas
+              Account
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link href="#action1">Home</Nav.Link>
               <Nav.Link href="#action2">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
+              <NavDropdown title="Account" id="offcanvasNavbarDropdown">
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
                   Another action
@@ -40,15 +40,6 @@ function NavTabs({ currentPage, handlePageChange }) {
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
