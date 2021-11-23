@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const mongoose = require('../config/connection')
 
 const QuestionSchema = new Schema({
     question: {
@@ -13,10 +14,10 @@ const QuestionSchema = new Schema({
         type: String,
         required: true,
     },
-    // user: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'User'
-    //   }
+    user_id: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+      }
 
 });
 

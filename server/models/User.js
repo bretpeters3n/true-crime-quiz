@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-
+const mongoose = require('../config/connection')
 const UserSchema = new Schema({
     name: {
         type: String,
@@ -19,10 +19,6 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
-    // questions: {
-    //     type: String,
-    //     required: true,
-    // },
 
 });
 
