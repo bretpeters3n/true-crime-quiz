@@ -1,7 +1,8 @@
 import * as React from "react";
 // import ReactDOM from "react-dom";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 export default function Homepage() {
   return (
@@ -12,7 +13,7 @@ export default function Homepage() {
             Let's get started.
             <br />
             <Link to="/game">
-              <Button variant="contained">Start Game!</Button>
+              <Button variant="primary">Start Game!</Button>
             </Link>
           </div>
         </div>
