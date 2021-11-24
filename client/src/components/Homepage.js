@@ -17,6 +17,7 @@ export default function Homepage() {
             </Link>
           </div>
         </div>
+        <div className="app"></div>
       </div>
     </>
   );

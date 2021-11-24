@@ -20,9 +20,14 @@ body {
 }
 
 .columns-container {
+  position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   gap: 18px;
+  height: 80vh;
+  /* margin-top: 35vh; */
 }
 
 .align-vertical {
@@ -34,7 +39,7 @@ body {
 
 .app {
   background-color: #252d4a;
-  width: 450px;
+  width: 400px;
   min-height: 200px;
   height: min-content;
   border-radius: 15px;
