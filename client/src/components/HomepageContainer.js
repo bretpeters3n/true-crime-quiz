@@ -4,7 +4,6 @@ import NavTabs from "./NavTabs.js";
 function HomepageContainer() {
   return (
     <div>
-        <NavTabs />
     </div>
 
     //landing page component
