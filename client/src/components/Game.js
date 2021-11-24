@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 export default function Game() {
   const questions = [
@@ -68,10 +70,14 @@ export default function Game() {
           duration: 0.3,
           type: "spring",
         }}
+        whileTap={{ scale: 0.6, opacity: 0 }}
       >
         {showScore ? (
           <div className="score-section">
             You scored {score} out of {questions.length}
+            <Link to="/game">
+              <Button variant="primary">Play Again!</Button>
+            </Link>
           </div>
         ) : (
           <>
