@@ -154,7 +154,10 @@ form {
 
 .score-section {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 24px;
+  gap: 12px;
   align-items: center;
 }
 
