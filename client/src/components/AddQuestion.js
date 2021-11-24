@@ -1,10 +1,12 @@
 import * as React from "react";
-import { useState } from "react";
 import Button from "react-bootstrap/Button";
+import { useState, useEffect } from "react";
+
 
 // import ReactDOM from "react-dom";
 // import Button from "@mui/material/Button";
 // import { Link } from "react-router-dom";
+
 
 export default function AddQuestion() {
   // Here we set two state variables for firstName and lastName using `useState`
@@ -102,7 +104,7 @@ export default function AddQuestion() {
               name="answerText4"
               onChange={handleInputChange}
               type="text"
-              placeholder="Answer 4"
+              placeholder="Your Question"
             />
             <input type="radio" value="3" name="correct" /> Correct
           </div>
@@ -112,6 +114,5 @@ export default function AddQuestion() {
           </Button>
         </form>
       </div>
-    </div>
   );
 }
