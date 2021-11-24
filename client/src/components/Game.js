@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Game() {
   const questions = [
@@ -58,7 +59,16 @@ export default function Game() {
   };
   return (
     <div className="columns-container">
-      <div className="app">
+      <motion.div
+        className="app"
+        initial={{ scale: 0.5, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{
+          delay: 0.1,
+          duration: 0.3,
+          type: "spring",
+        }}
+      >
         {showScore ? (
           <div className="score-section">
             You scored {score} out of {questions.length}
@@ -86,7 +96,7 @@ export default function Game() {
             </div>
           </>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 }
