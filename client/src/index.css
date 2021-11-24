@@ -13,16 +13,19 @@ body {
 
 body {
   background-color: #7cc6fe;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
 .columns-container {
+  position:relative;
   display: flex;
+  justify-content: center;
   flex-direction: row;
   gap: 18px;
+  margin-top: 35vh;
 }
 
 .align-vertical {
