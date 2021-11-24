@@ -9,9 +9,12 @@ export default function Homepage() {
     <>
       <div className="columns-container">
         <div className="sides">
+          {/* ---WelcomeBox--- */}
           <div className="app">Welcome</div>
+          {/* ---HighScoresBox--- */}
           <div className="app large2">HighScores</div>
         </div>
+        {/* ---InstructionsBox--- */}
         <div className="app-ins">
           <h2>Instructions</h2>
           <p>
@@ -26,8 +29,10 @@ export default function Homepage() {
           </p>
         </div>
         <div className="sides">
+          {/* ---Login/SignupBox--- */}
           <div className="app large">Login/Signup</div>
           <div className="app">
+            {/* ---GameBox--- */}
             <div className="align-vertical">
               Let's get started.
               <br />

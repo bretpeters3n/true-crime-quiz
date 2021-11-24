@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
 
 // import ReactDOM from "react-dom";
 // import Button from "@mui/material/Button";
@@ -49,10 +50,12 @@ export default function AddQuestion() {
 
   return (
     <div className="columns-container">
-      <div className="app">
+      <div className="addQuestion-app">
         <form className="form">
-          <h3>Add your own question to the game!</h3>
+          <h3>Add a custom question!</h3>
+          <p className="addQuestionIns">Enter your question, answers, and choose which one will be correct.</p>
           <textarea
+            className="yourQuestion"
             value={questionText}
             name="questionText"
             onChange={handleInputChange}
@@ -61,48 +64,52 @@ export default function AddQuestion() {
           />
           <div className="sideBySideInputs">
             <input
+              className="yourAnswer"
               value={answerText1}
               name="answerText1"
               onChange={handleInputChange}
               type="text"
               placeholder="Answer 1"
             />
-            <input type="radio" value="0" name="correct" /> Mark correct
+            <input type="radio" value="0" name="correct" /> Correct
           </div>
           <div className="sideBySideInputs">
             <input
+              className="yourAnswer"
               value={answerText2}
               name="answerText2"
               onChange={handleInputChange}
               type="text"
               placeholder="Answer 2"
             />
-            <input type="radio" value="1" name="correct" /> Mark correct
+            <input type="radio" value="1" name="correct" /> Correct
           </div>
           <div className="sideBySideInputs">
             <input
+              className="yourAnswer"
               value={answerText3}
               name="answerText3"
               onChange={handleInputChange}
               type="text"
               placeholder="Answer 3"
             />
-            <input type="radio" value="2" name="correct" /> Mark correct
+            <input type="radio" value="2" name="correct" /> Correct
           </div>
           <div className="sideBySideInputs">
             <input
+              className="yourAnswer"
               value={answerText4}
               name="answerText4"
               onChange={handleInputChange}
               type="text"
               placeholder="Answer 4"
             />
-            <input type="radio" value="3" name="correct" /> Mark correct
+            <input type="radio" value="3" name="correct" /> Correct
           </div>
 
-          <button type="button" onClick={handleFormSubmit}>
+          <Button className="submitBtn" variant="outline-success" type="button" onClick={handleFormSubmit}>
             Submit
-          </button>
+          </Button>
         </form>
       </div>
     </div>
