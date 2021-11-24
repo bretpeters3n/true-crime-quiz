@@ -2,11 +2,9 @@ import * as React from "react";
 import Button from "react-bootstrap/Button";
 import { useState, useEffect } from "react";
 
-
 // import ReactDOM from "react-dom";
 // import Button from "@mui/material/Button";
 // import { Link } from "react-router-dom";
-
 
 export default function AddQuestion() {
   // Here we set two state variables for firstName and lastName using `useState`
@@ -55,7 +53,9 @@ export default function AddQuestion() {
       <div className="addQuestion-app">
         <form className="form">
           <h3>Add a custom question!</h3>
-          <p className="addQuestionIns">Enter your question, answers, and choose which one will be correct.</p>
+          <p className="addQuestionIns">
+            Enter your question, answers, and choose which one will be correct.
+          </p>
           <textarea
             className="yourQuestion"
             value={questionText}
@@ -109,10 +109,16 @@ export default function AddQuestion() {
             <input type="radio" value="3" name="correct" /> Correct
           </div>
 
-          <Button className="submitBtn" variant="outline-success" type="button" onClick={handleFormSubmit}>
+          <Button
+            className="submitBtn"
+            variant="outline-success"
+            type="button"
+            onClick={handleFormSubmit}
+          >
             Submit
           </Button>
         </form>
       </div>
+    </div>
   );
 }
