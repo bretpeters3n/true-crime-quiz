@@ -111,7 +111,7 @@ export default function AddQuestion() {
 
           <Button
             className="submitBtn"
-            variant="outline-success"
+            variant="success"
             type="button"
             onClick={handleFormSubmit}
           >
