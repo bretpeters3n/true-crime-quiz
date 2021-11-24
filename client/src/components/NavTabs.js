@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Test from "../Nav-icons/testnavavatar.jpg"
 
+
 function NavTabs({ currentPage, handlePageChange }) {
   return (
 <Navbar bg="light">
