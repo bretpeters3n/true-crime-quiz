@@ -37,6 +37,23 @@ body {
   gap: 18px;
 }
 
+input {
+  color: #000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sideBySideInputs {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
 .app {
   background-color: #252d4a;
   width: 400px;

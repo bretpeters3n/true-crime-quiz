@@ -18,7 +18,20 @@ export default function AddQuestion() {
     const { name, value } = e.target;
 
     // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
-    // return name === "firstName" ? setFirstName(value) : setLastName(value);
+    if (name === "questionText") {
+      return setQuestionText(value);
+    } else if (name === "answerText1") {
+      return setAnswerText1(value);
+    } else if (name === "answerText2") {
+      return setAnswerText2(value);
+    } else if (name === "answerText3") {
+      return setAnswerText3(value);
+    } else if (name === "answerText4") {
+      return setAnswerText4(value);
+    }
+    // return name === "questionText"
+    //   ? setQuestionText(value)
+    //   : setAnswerText1(value);
   };
 
   const handleFormSubmit = (e) => {
@@ -38,41 +51,54 @@ export default function AddQuestion() {
     <div className="columns-container">
       <div className="app">
         <form className="form">
-          <input
+          <h3>Add your own question to the game!</h3>
+          <textarea
             value={questionText}
             name="questionText"
             onChange={handleInputChange}
             type="text"
             placeholder="Your Question"
           />
-          <input
-            value={answerText1}
-            name="answerText1"
-            onChange={handleInputChange}
-            type="text"
-            placeholder="Answer 1"
-          />
-          <input
-            value={answerText2}
-            name="answerText2"
-            onChange={handleInputChange}
-            type="text"
-            placeholder="Answer 2"
-          />
-          <input
-            value={answerText3}
-            name="answerText3"
-            onChange={handleInputChange}
-            type="text"
-            placeholder="Answer 3"
-          />
-          <input
-            value={answerText4}
-            name="answerText4"
-            onChange={handleInputChange}
-            type="text"
-            placeholder="Answer 4"
-          />
+          <div className="sideBySideInputs">
+            <input
+              value={answerText1}
+              name="answerText1"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Answer 1"
+            />
+            <input type="radio" value="0" name="correct" /> Mark correct
+          </div>
+          <div className="sideBySideInputs">
+            <input
+              value={answerText2}
+              name="answerText2"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Answer 2"
+            />
+            <input type="radio" value="1" name="correct" /> Mark correct
+          </div>
+          <div className="sideBySideInputs">
+            <input
+              value={answerText3}
+              name="answerText3"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Answer 3"
+            />
+            <input type="radio" value="2" name="correct" /> Mark correct
+          </div>
+          <div className="sideBySideInputs">
+            <input
+              value={answerText4}
+              name="answerText4"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Answer 4"
+            />
+            <input type="radio" value="3" name="correct" /> Mark correct
+          </div>
 
           <button type="button" onClick={handleFormSubmit}>
             Submit
