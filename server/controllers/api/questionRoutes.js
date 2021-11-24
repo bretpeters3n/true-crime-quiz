@@ -6,6 +6,7 @@ const { Question } = require('../../models');
 router.get("/all", (req, res) => {
     Question.find()
         .then(dbQuestions => {
+            console.log(dbQuestions)
             res.json(dbQuestions);
         })
         .catch(err => {
