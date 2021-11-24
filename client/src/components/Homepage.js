@@ -9,7 +9,30 @@ export default function Homepage() {
     <>
       <div className="columns-container">
         <div className="sides">
+          {/* ---WelcomeBox--- */}
+          <div className="app">Welcome</div>
+          {/* ---HighScoresBox--- */}
+          <div className="app large2">HighScores</div>
+        </div>
+        {/* ---InstructionsBox--- */}
+        <div className="app-ins">
+          <h2>Instructions</h2>
+          <p>
+            Aliquam pellentesque sodales commodo. Aenean eu interdum enim.
+            Aenean at purus rhoncus, mollis est eu, venenatis magna.
+            Pellentesque posuere placerat lectus, id aliquam sapien varius non.
+            Donec vulputate, orci a iaculis consectetur, ante nulla pretium est,
+            quis accumsan risus diam nec ante. Suspendisse dictum fermentum
+            felis eget lobortis. Phasellus pharetra nisi eros, a imperdiet nisi
+            sollicitudin vel. Nullam id lacinia augue. Ut lacinia leo a diam
+            congue scelerisque. Cras vehicula a velit ac ultrices.
+          </p>
+        </div>
+        <div className="sides">
+          {/* ---Login/SignupBox--- */}
+          <div className="app large">Login/Signup</div>
           <div className="app">
+            {/* ---GameBox--- */}
             <div className="align-vertical">
               Let's get started.
               <br />
@@ -18,13 +41,7 @@ export default function Homepage() {
               </Link>
             </div>
           </div>
-          <div className="app large2"></div>
         </div>
-          <div className="app-ins"><h2>Instructions</h2><p>Aliquam pellentesque sodales commodo. Aenean eu interdum enim. Aenean at purus rhoncus, mollis est eu, venenatis magna. Pellentesque posuere placerat lectus, id aliquam sapien varius non. Donec vulputate, orci a iaculis consectetur, ante nulla pretium est, quis accumsan risus diam nec ante. Suspendisse dictum fermentum felis eget lobortis. Phasellus pharetra nisi eros, a imperdiet nisi sollicitudin vel. Nullam id lacinia augue. Ut lacinia leo a diam congue scelerisque. Cras vehicula a velit ac ultrices.</p></div>
-        <div className="sides">
-          <div className="app large">Login/Signup</div>
-          <div className="app"></div>
-          </div>
       </div>
     </>
   );

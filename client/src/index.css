@@ -100,6 +100,28 @@ body {
   font-size: 21px;
 }
 
+.addQuestion-app {
+  background-color: #252d4a;
+  width: 400px;
+  min-height: 200px;
+  height: 48vh;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h3{
+  font-weight: bolder;
+}
+
+.addQuestionIns{
+  font-size: 10.4px;
+  color: rgba(255, 255, 255, 0.714);
+  margin-bottom: 1px;
+}
+
 input {
   color: #000;
 }
@@ -117,9 +139,28 @@ form {
   gap: 12px;
 }
 
+
 .vertAlign {
   display: flex;
   flex-direction: column;
+}
+
+.yourQuestion{
+  border-radius: 12px;
+  resize: none;
+  padding: 7px;
+  color: black;
+}
+
+.yourAnswer{
+  border-radius: 6px;
+  padding: 2px;
+  padding-left: 3px;
+  width: 75%;
+}
+
+.submitBtn{
+  margin-top: 10px;
 }
 
 .app {
