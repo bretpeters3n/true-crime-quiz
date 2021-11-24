@@ -18,25 +18,25 @@ body {
   min-height: 100vh;
 }
 /* NAV BAR */
-#basic-navbar-nav{
+#basic-navbar-nav {
   justify-content: flex-end;
 }
 
-.navContainer{
+.navContainer {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-#basic-nav-dropdown{
+#basic-nav-dropdown {
   display: flex;
 }
 
-.dropdown-toggle::after{
+.dropdown-toggle::after {
   margin-left: 0px !important;
   display: none !important;
 }
 
-.nav-icon{
+.nav-icon {
   display: flex;
   justify-content: flex-end;
   justify-content: space-between;
@@ -45,11 +45,10 @@ body {
   word-spacing: 25px;
 }
 
-.thumbnail-img{
+.thumbnail-img {
   display: flex;
   height: 35px;
   width: 35px;
-  
 }
 
 .columns-container {
@@ -59,7 +58,38 @@ body {
   align-items: center;
   flex-direction: row;
   gap: 18px;
-  height: 80vh;
+  height: 92vh;
+}
+
+.sides {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+.large {
+  margin-bottom: 15px;
+  background-color: #252d4a;
+  width: 400px;
+  min-height: 200px;
+  height: 400px !important;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.large2 {
+  margin-top: 15px;
+  background-color: #252d4a;
+  width: 400px;
+  min-height: 200px;
+  height: 400px !important;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .align-vertical {
@@ -67,6 +97,7 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 18px;
+  font-size: 21px;
 }
 
 input {
@@ -96,6 +127,24 @@ form {
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-evenly;
+}
+
+.app-ins {
+  background-color: #252d4a;
+  width: 400px;
+  min-height: 200px;
+  height: 600px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-size: 19px;
+}
+
+.app-ins h2 {
+  font-weight: bold;
 }
 
 .score-section {
