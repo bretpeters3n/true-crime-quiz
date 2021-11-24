@@ -9,7 +9,7 @@ function NavTabs({ currentPage, handlePageChange }) {
   return (
 <Navbar bg="light">
   <Container className="navContainer">
-    <Navbar.Brand href="#home">𝕋𝕣𝕦𝕖 ℂ𝕣𝕚𝕞𝕖 ℚ𝕦𝕚𝕫</Navbar.Brand>
+    <Navbar.Brand href="/">𝕋𝕣𝕦𝕖 ℂ𝕣𝕚𝕞𝕖 ℚ𝕦𝕚𝕫</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-right">

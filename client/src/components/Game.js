@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 
 export default function Game() {
@@ -76,6 +78,7 @@ export default function Game() {
   }, [])
 
   return (
+
     <>
       { renderReady === true && (
         <div className="columns-container">
@@ -92,6 +95,35 @@ export default function Game() {
             {showScore ? (
               <div className="score-section">
                 You scored {score} out of {questions[0].length}
+
+    <div className="columns-container">
+      <motion.div
+        className="app"
+        initial={{ scale: 0.5, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{
+          delay: 0.1,
+          duration: 0.3,
+          type: "spring",
+        }}
+        whileTap={{ scale: 0.6, opacity: 0 }}
+      >
+        {showScore ? (
+          <div className="score-section">
+            You scored {score} out of {questions.length}
+            <Link to="/game">
+              <Button variant="primary">Play Again!</Button>
+            </Link>
+          </div>
+        ) : (
+          <>
+            <div className="question-section">
+              <div className="question-count">
+                <span>Question {currentQuestion + 1}</span>/{questions.length}
+              </div>
+              <div className="question-text">
+                {questions[currentQuestion].questionText}
+
               </div>
             ) : (
               <>

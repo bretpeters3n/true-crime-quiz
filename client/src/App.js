@@ -8,6 +8,7 @@ import NavTabs from "./components/NavTabs";
 import Homepage from "./components/Homepage";
 import Game from "./components/Game";
 import AddQuestion from "./components/AddQuestion";
+import Profile from "./components/Profile";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/game" element={<Game />} />
           <Route exact path="/addquestion" element={<AddQuestion />} />
+          <Route exact path="/profile" element={<Profile />} />
         </Routes>
       </Router>
     </div>
