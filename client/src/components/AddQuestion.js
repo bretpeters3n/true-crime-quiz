@@ -14,6 +14,24 @@ export default function AddQuestion() {
   const [answerText3, setAnswerText3] = useState("");
   const [answerText4, setAnswerText4] = useState("");
 
+
+  async function writeQuestionToDb() {
+    const response = await fetch('/api/questions/new', {
+      method: 'POST',
+      body: JSON.stringify({
+        questionText: questionText,
+        answerOptions: [answerText1, answerText2, answerText3, answerText4] 
+      }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert('Failed to submit question, try again!');
+    }
+  };
+ 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { name, value } = e.target;
@@ -38,6 +56,8 @@ export default function AddQuestion() {
   const handleFormSubmit = (e) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
+    writeQuestionToDb();
+
 
     // Alert the user their first and last name, clear the inputs
     // alert(`Hello ${firstName} ${lastName}`);
@@ -104,7 +124,7 @@ export default function AddQuestion() {
               name="answerText4"
               onChange={handleInputChange}
               type="text"
-              placeholder="Your Question"
+              placeholder="Answer 4"
             />
             <input type="radio" value="3" name="correct" /> Correct
           </div>
@@ -113,7 +133,7 @@ export default function AddQuestion() {
             className="submitBtn"
             variant="success"
             type="button"
-            onClick={handleFormSubmit}
+    onClick={handleFormSubmit}
           >
             Submit
           </Button>
