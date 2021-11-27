@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 * {
   font-family: "Verdana", cursive, sans-serif;
@@ -175,6 +176,7 @@ form {
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .app-ins {
@@ -195,10 +197,25 @@ form {
   font-weight: bold;
 }
 
+.appGame {
+  background-color: #252d4a;
+  width: 600px;
+  min-height: 200px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
 .score-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  left: 26%;
   font-size: 24px;
   gap: 12px;
   align-items: center;
@@ -208,6 +225,7 @@ form {
 .question-section {
   width: 100%;
   position: relative;
+  margin-right: 10px;
 }
 
 .question-count {
@@ -238,6 +256,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 12px;
 }
 
 button {
