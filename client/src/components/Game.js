@@ -76,6 +76,7 @@ export default function Game() {
                 <div className="answer-section">
                   {questions[currentQuestion].answerOptions.map((answerOption) => (
                     <button
+                    className="ansButton"
                       onClick={() =>
                         handleAnswerOptionClick(answerOption.isCorrect)
                       }
