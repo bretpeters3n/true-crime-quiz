@@ -4,11 +4,11 @@ const mongoose = require('../config/connection')
 const QuestionSchema = new Schema({
     questionText: {
         type: String,
-        required: true,
+        // required: true,
     },
     answerOptions: {
         type: Array,
-        required: true,
+        // required: true,
     },
     user_id: {
         type: Schema.Types.ObjectId,
