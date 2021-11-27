@@ -44,10 +44,14 @@ router.put("/update/:id", (req, res) => {
     );
 });
 
-router.post("/new", ({ body }, res) => {
-    const user = body;
+router.post("/new", ({body}, res) => {
+    // const question = new Question({
+    //     questionText: req.body.questionText,
+    //     answerOptions: req.body.answerOptions
+    // })
+    const question = body;
 
-    Question.create(user, (error, saved) => {
+    Question.create(question, (error, saved) => {
         if (error) {
             console.log(error);
         } else {

@@ -20,7 +20,7 @@ export default function AddQuestion() {
       method: 'POST',
       body: JSON.stringify({
         questionText: questionText,
-        answerOptions: { answerText1, answerText2, answerText3, answerText4 }
+        answerOptions: [answerText1, answerText2, answerText3, answerText4] 
       }),
       headers: { 'Content-Type': 'application/json' },
     });
@@ -31,11 +31,7 @@ export default function AddQuestion() {
       alert('Failed to submit question, try again!');
     }
   };
-
-  useEffect(() => {
-    writeQuestionToDb();
-  }, [])
-
+ 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { name, value } = e.target;
@@ -60,6 +56,8 @@ export default function AddQuestion() {
   const handleFormSubmit = (e) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
+    writeQuestionToDb();
+
 
     // Alert the user their first and last name, clear the inputs
     // alert(`Hello ${firstName} ${lastName}`);
@@ -135,7 +133,7 @@ export default function AddQuestion() {
             className="submitBtn"
             variant="success"
             type="button"
-            onClick={handleFormSubmit}
+    onClick={handleFormSubmit}
           >
             Submit
           </Button>
