@@ -5,7 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll; 
 }
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
 * {
   font-family: "Verdana", cursive, sans-serif;
   color: #ffffff;
@@ -58,7 +66,7 @@ body {
   align-items: center;
   flex-direction: row;
   gap: 18px;
-  height: 92vh;
+  height: 90vh;
 }
 
 .sides {
@@ -150,6 +158,8 @@ form {
   resize: none;
   padding: 7px;
   color: black;
+  resize: none;
+  height: 70px;
 }
 
 .yourAnswer{
@@ -173,6 +183,7 @@ form {
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .app-ins {
@@ -193,10 +204,25 @@ form {
   font-weight: bold;
 }
 
+.appGame {
+  background-color: #252d4a;
+  width: 600px;
+  min-height: 200px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
 .score-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  left: 26%;
   font-size: 24px;
   gap: 12px;
   align-items: center;
@@ -206,6 +232,7 @@ form {
 .question-section {
   width: 100%;
   position: relative;
+  margin-right: 10px;
 }
 
 .question-count {
@@ -238,18 +265,19 @@ form {
   justify-content: space-between;
 }
 
-button {
+.ansButton {
   width: 100%;
   font-size: 16px;
   color: #ffffff;
-  background-color: #252d4a;
-  border-radius: 15px;
+  background-color: #31374d;
+  border-radius: 10px;
   display: flex;
   padding: 5px;
   justify-content: flex-start;
   align-items: center;
   border: 5px solid #234668;
   cursor: pointer;
+  margin-bottom: 12px;
 }
 
 .correct {

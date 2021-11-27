@@ -11,7 +11,7 @@
                 "isCorrect": false
             },
             {
-                "answerText": "Anyone who murders more than one person in separate events.",
+                "answerText": "10 or more",
                 "isCorrect": false
             },
             {
@@ -214,6 +214,94 @@
             },
             {
                 "answerText": "NCIS",
+                "isCorrect": false
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "Which serial killer enjoyed dressing up as a clown and working charity events?",
+        "answerOptions": [
+            {
+                "answerText": "Ian Brady",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Dennis Rader",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Jogn Wayne Gacy",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Ed Gein",
+                "isCorrect": false
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "The St. Valentine's Day Massacre is associated with which famous criminal?",
+        "answerOptions": [
+            {
+                "answerText": "Al Capone",
+                "isCorrect": true
+            },
+            {
+                "answerText": "John Dillinger, Jr.",
+                "isCorrect": false
+            },
+            {
+                "answerText": "George Moran",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Jack the Ripper",
+                "isCorrect": false
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "Which man was the most prolific known serial killer in United States history?",
+        "answerOptions": [
+            {
+                "answerText": "Gary Ridgway",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Jeffrey Dahmer",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Paul Knowles",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Ted Bundy",
+                "isCorrect": false
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "In Chicago, criminal H.H. Holmes had a house in Chicago that eventually bore which nickname?",
+        "answerOptions": [
+            {
+                "answerText": "The Dungeon",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Murder Castle",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Fraudville",
+                "isCorrect": false
+            },
+            {
+                "answerText": "The Last House on the Left",
                 "isCorrect": false
             }
         ],
