@@ -14,6 +14,28 @@ export default function AddQuestion() {
   const [answerText3, setAnswerText3] = useState("");
   const [answerText4, setAnswerText4] = useState("");
 
+
+  async function writeQuestionToDb() {
+    const response = await fetch('/api/questions/new', {
+      method: 'POST',
+      body: JSON.stringify({
+        questionText: questionText,
+        answerOptions: { answerText1, answerText2, answerText3, answerText4 }
+      }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert('Failed to submit question, try again!');
+    }
+  };
+
+  useEffect(() => {
+    writeQuestionToDb();
+  }, [])
+
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { name, value } = e.target;
