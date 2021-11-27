@@ -150,6 +150,8 @@ form {
   resize: none;
   padding: 7px;
   color: black;
+  resize: none;
+  height: 70px;
 }
 
 .yourAnswer{
