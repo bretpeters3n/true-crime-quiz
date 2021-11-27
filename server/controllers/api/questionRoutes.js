@@ -44,11 +44,7 @@ router.put("/update/:id", (req, res) => {
     );
 });
 
-router.post("/new", ({body}, res) => {
-    // const question = new Question({
-    //     questionText: req.body.questionText,
-    //     answerOptions: req.body.answerOptions
-    // })
+router.post("/new", ({ body }, res) => {
     const question = body;
 
     Question.create(question, (error, saved) => {

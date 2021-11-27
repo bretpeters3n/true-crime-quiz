@@ -21,12 +21,15 @@ export default function AddQuestion() {
       body: JSON.stringify({
         questionText: questionText,
         answerOptions: [answerText1, answerText2, answerText3, answerText4] 
+        //get user id from url 
+        // user_id: req.params.id
       }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
       document.location.replace('/');
+      alert('youre in!')
     } else {
       alert('Failed to submit question, try again!');
     }
