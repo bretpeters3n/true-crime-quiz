@@ -126,7 +126,7 @@ export default function AddQuestion() {
               name="answerText4"
               onChange={handleInputChange}
               type="text"
-              placeholder="Your Question"
+              placeholder="Answer 4"
             />
             <input type="radio" value="3" name="correct" /> Correct
           </div>

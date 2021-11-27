@@ -1,43 +1,219 @@
 [
     {
-        "questionText": "What is the capital of New York?",
+        "questionText": "How many murders make someone a 'serial killer'?",
         "answerOptions": [
             {
-                "answerText": "Chicago",
+                "answerText": "2 or more",
                 "isCorrect": false
             },
             {
-                "answerText": "LA",
+                "answerText": "At least 3",
                 "isCorrect": false
             },
             {
-                "answerText": "Houston",
+                "answerText": "Anyone who murders more than one person in separate events.",
                 "isCorrect": false
             },
             {
-                "answerText": "New York",
+                "answerText": "All of the above",
                 "isCorrect": true
             }
         ],
         "user_id": "619bfa173ce385651d66c52f"
     },
     {
-        "questionText": "What is the capital of France?",
+        "questionText": "The character Jesse Pinkman is from what popular crime show?",
         "answerOptions": [
             {
-                "answerText": "Paris",
+                "answerText": "Jail Birds",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Breaking Bad",
                 "isCorrect": true
             },
             {
-                "answerText": "Cinncinati",
+                "answerText": "First 48",
                 "isCorrect": false
             },
             {
-                "answerText": "New York",
+                "answerText": "The Sopranos",
+                "isCorrect": false
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "What show features a main character who convinces the police he has psychic powers which help solve cases?",
+        "answerOptions": [
+            {
+                "answerText": "Psych",
+                "isCorrect": true
+            },
+            {
+                "answerText": "The Great British Baking Show",
                 "isCorrect": false
             },
             {
-                "answerText": "London",
+                "answerText": "COPS",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Law & Order",
+                "isCorrect": false
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "The St. Valentine's Day Massacre is associated with which famous criminal?",
+        "answerOptions": [
+            {
+                "answerText": "Jeffrey Dahmer",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Charles Manson",
+                "isCorrect": false
+            },
+            {
+                "answerText": "The Zodiac Killer",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Al Capone",
+                "isCorrect": true
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "Serial killer Ted Bundy once worked at which organization?",
+        "answerOptions": [
+            {
+                "answerText": "A suicide prevention hotline",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Helping troubled youth",
+                "isCorrect": false
+            },
+            {
+                "answerText": "A children's hospital",
+                "isCorrect": false
+            },
+            {
+                "answerText": "A fast food chain",
+                "isCorrect": false
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "How many people have been named as Jack the Ripper suspects?",
+        "answerOptions": [
+            {
+                "answerText": "100",
+                "isCorrect": true
+            },
+            {
+                "answerText": "200",
+                "isCorrect": false
+            },
+            {
+                "answerText": "50",
+                "isCorrect": false
+            },
+            {
+                "answerText": "10",
+                "isCorrect": false
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "What popular crime show features a team of 4 investigators and a dog?",
+        "answerOptions": [
+            {
+                "answerText": "Marley and Me",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Charlies Angels",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Scooby Doo",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Sherlock",
+                "isCorrect": false
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "What podcast features the detective responsible for bringing down the Goldne State Killer?",
+        "answerOptions": [
+            {
+                "answerText": "My Favorite Murder",
+                "isCorrect": false
+            },
+            {
+                "answerText": "The Murder Squad",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Hollywood Crime Scene",
+                "isCorrect": false
+            },
+            {
+                "answerText": "74 seconds",
+                "isCorrect": false
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "What serial killer is best known for driving a Volkswagen bug?",
+        "answerOptions": [
+            {
+                "answerText": "Charles Manson",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Jack the Ripper",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Ted Bundy",
+                "isCorrect": true
+            },
+            {
+                "answerText": "H.H. Holmes",
+                "isCorrect": false
+            }
+        ],
+        "user_id": "619bfa173ce385651d66c52f"
+    },
+    {
+        "questionText": "What show features the famous 'DUN DUN' during scene changes?",
+        "answerOptions": [
+            {
+                "answerText": "Monk",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Power Rangers S.P.D",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Law & Order SVU",
+                "isCorrect": true
+            },
+            {
+                "answerText": "NCIS",
                 "isCorrect": false
             }
         ],
