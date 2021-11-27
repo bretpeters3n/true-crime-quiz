@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
-
 export default function Game() {
   // const questionsArr = [
   //   {
@@ -44,7 +43,7 @@ export default function Game() {
   //   },
   // ];
 
-  const [renderReady, setRenderReady] = useState(false)
+  const [renderReady, setRenderReady] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -64,18 +63,43 @@ export default function Game() {
   };
 
   const getQuestionsFromDB = async () => {
-    const response = await fetch('/api/questions/all');
+    console.log("getQuestionsFromDB function entered");
+    const response = await fetch("/api/questions/all");
     const data = await response.json();
-    console.log(data)
+    setXQuestions(data);
+    // setQuestions(data);
+    // setRenderReady(true);
+  };
+
+  const setXQuestions = async (data) => {
+    // const numberOfQuestions = 5;
+    console.log("setXQuestions function entered");
+    console.log(
+      "There are " + data.length + " questions in the question array"
+    );
+
+    // for (let num = data.length - 1; num >= numberOfQuestions; num--) {
+    //   // Runs 5 times, with values of step 0 through 4.
+    //   console.log("Going through for loop");
+    //   const randomItem = await data[Math.floor(Math.random() * data.length)];
+    //   console.log("randomItem = " + JSON.stringify(randomItem));
+    //   console.log("_id of randomItem is " + randomItem._id);
+    //   const updatedData = data.filter((item) => item._id !== randomItem._id);
+    // }
+    const randomItem = await data[Math.floor(Math.random() * data.length)];
+    console.log("randomItem = " + JSON.stringify(randomItem));
+    console.log("_id of randomItem is " + randomItem._id);
+    // data = data.splice(data.indexOf(randomItem), 1);
+    const updatedData = data.filter((item) => item._id !== randomItem._id);
+    console.log("data now contains " + JSON.stringify(updatedData));
     setQuestions(data);
-    setRenderReady(true)
-    console.log(data);
-  }
+    setRenderReady(true);
+  };
 
   useEffect(() => {
     // setQuestions(questionsArr)
     getQuestionsFromDB();
-  }, [])
+  }, []);
 
   return (
     <>
@@ -103,27 +127,34 @@ export default function Game() {
               <>
                 <div className="question-section">
                   <div className="question-count">
-                    <span>Question {currentQuestion + 1}</span>/{questions.length}
+                    <span>Question {currentQuestion + 1}</span>/
+                    {questions.length}
                   </div>
                   <div className="question-text">
                     {questions[currentQuestion].questionText}
                   </div>
                 </div>
                 <div className="answer-section">
-                  {questions[currentQuestion].answerOptions.map((answerOption) => (
-                    <button
-                      onClick={() =>
-                        handleAnswerOptionClick(answerOption.isCorrect)
-                      }
-                    >
-                      {answerOption.answerText}
-                    </button>
-                  ))}
+                  {questions[currentQuestion].answerOptions.map(
+                    (answerOption) => (
+                      <button
+                        // Not sure if this is the correct KEY application -- we are still getting an error about it -- could it be coming from somewhere else?
+                        key={questions._id}
+                        onClick={() =>
+                          handleAnswerOptionClick(answerOption.isCorrect)
+                        }
+                      >
+                        {answerOption.answerText}
+                      </button>
+                    )
+                  )}
                 </div>
               </>
             )}
           </motion.div>
         </div>
-      )};
+      )}
+      ;
     </>
-  )}
+  );
+}
