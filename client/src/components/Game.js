@@ -37,12 +37,16 @@ export default function Game() {
     getQuestionsFromDB();
   }, [])
 
+  function refreshPage() {
+    window.location.reload(true);
+  }
+
   return (
     <>
       {renderReady === true && (
         <div className="columns-container">
           <motion.div
-            className="app"
+            className="appGame"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{
@@ -56,7 +60,7 @@ export default function Game() {
               <div className="score-section">
                 You scored {score} out of {questions.length}
                 <Link to="/game">
-                  <Button variant="primary">Play Again!</Button>
+                  <Button onClick={refreshPage} variant="primary">Play Again!</Button>
                 </Link>
               </div>
             ) : (
@@ -72,6 +76,7 @@ export default function Game() {
                 <div className="answer-section">
                   {questions[currentQuestion].answerOptions.map((answerOption) => (
                     <button
+                    className="ansButton"
                       onClick={() =>
                         handleAnswerOptionClick(answerOption.isCorrect)
                       }
