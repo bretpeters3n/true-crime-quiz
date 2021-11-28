@@ -19,6 +19,10 @@ body::-webkit-scrollbar {
   color: #ffffff;
 }
 
+a {
+  text-align: center;
+}
+
 body {
   background-color: #7cc6fe;
   justify-content: center;
@@ -182,8 +186,9 @@ form {
   padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
-  justify-content: space-evenly;
-  justify-content: space-between;
+  justify-content: center;
+  /* justify-content: space-evenly;
+  justify-content: space-between; */
 }
 
 .app-ins {
@@ -213,8 +218,8 @@ form {
   padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
-  justify-content: space-evenly;
-  justify-content: space-between;
+  /* justify-content: space-evenly;
+  justify-content: space-between; */
 }
 
 .score-section {
