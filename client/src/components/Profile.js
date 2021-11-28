@@ -55,11 +55,11 @@ console.log("value", value);
         return <div className="columns-container">
           <div className="app">
             <form className="form">
-              <h3>{value}</h3>
+              <h3>Profile</h3>
               <label className="vertAlign">
                 Name
                 <input
-                  value={nameText}
+                  value={value.firstName}
                   name="nameText"
                   onChange={handleInputChange}
                   type="text"

@@ -9,11 +9,16 @@ import Homepage from "./components/Homepage";
 import Game from "./components/Game";
 import AddQuestion from "./components/AddQuestion";
 import Profile from "./components/Profile";
-import { UserContext } from "./utils/UserContext";
-
+import { UserContext, UserProvider } from "./utils/UserContext";
+import LoginSignUp from "./components/LoginSignUp";
+import {Auth0Provider} from '@auth0/auth0-react';
 export default function App() {
-  return (
-    <UserContext.Provider value="emily">
+  return (<Auth0Provider
+    domain="dev-r9whaml0.us.auth0.com"
+    clientId="2f36QL7XqWEwxBXKVjDy7j6x2AndBmic"
+    redirectUri={window.location.origin}
+  >
+    <UserProvider>
     <div>
       <NavTabs />
       <Router>
@@ -22,9 +27,11 @@ export default function App() {
           <Route exact path="/game" element={<Game />} />
           <Route exact path="/addquestion" element={<AddQuestion />} />
           <Route exact path="/profile" element={<Profile />} />
+          <Route exact path="/login" element={<LoginSignUp />} />
         </Routes>
       </Router>
     </div>
-    </UserContext.Provider>
+    </UserProvider>
+  </Auth0Provider>
   );
 }
