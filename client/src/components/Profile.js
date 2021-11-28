@@ -1,5 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
+import { useUserContext } from "../utils/UserContext";
+import { UserContext } from "../utils/UserContext"
 // import Form from "react-bootstrap/Form";
 // import Button from "react-bootstrap/Button";
 
@@ -44,57 +46,64 @@ export default function Profile() {
     setPasswordText("");
     setBioText("");
   };
+  // const userMng = useUserContext()
 
   return (
-    <div className="columns-container">
-      <div className="app">
-        <form className="form">
-          <h3>Your Profile</h3>
-          <label className="vertAlign">
-            Name
-            <input
-              value={nameText}
-              name="nameText"
-              onChange={handleInputChange}
-              type="text"
-              placeholder="John Doe"
-            />
-          </label>
-          <label className="vertAlign">
-            Email
-            <input
-              value={emailText}
-              name="emailText"
-              onChange={handleInputChange}
-              type="email"
-              placeholder="youremail@email.com"
-            />
-          </label>
-          <label className="vertAlign">
-            Password
-            <input
-              value={passwordText}
-              name="passwordText"
-              onChange={handleInputChange}
-              type="password"
-              placeholder="password"
-            />
-          </label>
-          <label className="vertAlign">
-            Bio
-            <textarea
-              value={bioText}
-              name="bioText"
-              onChange={handleInputChange}
-              type="text"
-              placeholder="Your bio goes here"
-            />
-          </label>
-          <button type="button" onClick={handleFormSubmit}>
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
+    <UserContext.Consumer>
+      {value => {
+console.log("value", value);
+        return <div className="columns-container">
+          <div className="app">
+            <form className="form">
+              <h3>{value}</h3>
+              <label className="vertAlign">
+                Name
+                <input
+                  value={nameText}
+                  name="nameText"
+                  onChange={handleInputChange}
+                  type="text"
+                  placeholder="John Doe"
+                />
+              </label>
+              <label className="vertAlign">
+                Email
+                <input
+                  value={emailText}
+                  name="emailText"
+                  onChange={handleInputChange}
+                  type="email"
+                  placeholder="youremail@email.com"
+                />
+              </label>
+              <label className="vertAlign">
+                Password
+                <input
+                  value={passwordText}
+                  name="passwordText"
+                  onChange={handleInputChange}
+                  type="password"
+                  placeholder="password"
+                />
+              </label>
+              <label className="vertAlign">
+                Bio
+                <textarea
+                  value={bioText}
+                  name="bioText"
+                  onChange={handleInputChange}
+                  type="text"
+                  placeholder="Your bio goes here"
+                />
+              </label>
+              <button type="button" onClick={handleFormSubmit}>
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      }
+      }
+    </UserContext.Consumer>
   );
 }

@@ -9,9 +9,11 @@ import Homepage from "./components/Homepage";
 import Game from "./components/Game";
 import AddQuestion from "./components/AddQuestion";
 import Profile from "./components/Profile";
+import { UserContext } from "./utils/UserContext";
 
 export default function App() {
   return (
+    <UserContext.Provider value="emily">
     <div>
       <NavTabs />
       <Router>
@@ -23,5 +25,6 @@ export default function App() {
         </Routes>
       </Router>
     </div>
+    </UserContext.Provider>
   );
 }
