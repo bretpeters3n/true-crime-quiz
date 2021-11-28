@@ -14,12 +14,12 @@ function NavTabs({ currentPage, handlePageChange }) {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-right">
-        {/* <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#link">Link</Nav.Link> */}
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="/addquestion">Add a Question</Nav.Link>
         <NavDropdown title={ <div className="nav-icon"><img className="thumbnail-img" src={Test} alt="user pic" />&#8964;</div>} id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Something cool</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Some lame thing</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">𝒻𝒶𝓃𝒸𝓎 things</NavDropdown.Item>
+          <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+          <NavDropdown.Item href="/game">Game</NavDropdown.Item>
+          <NavDropdown.Item href="/login">Login</NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
         </NavDropdown>
