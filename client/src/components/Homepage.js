@@ -31,6 +31,7 @@ export default function Homepage() {
         <div className="sides">
           {/* ---Login/SignupBox--- */}
           <div className="app large">Login/Signup</div>
+          {/* <Button href="/loginsignup" variant="success"> Sign Up </Button> */}
           <div className="app">
             {/* ---GameBox--- */}
             <div className="align-vertical">
