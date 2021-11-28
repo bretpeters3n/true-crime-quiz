@@ -3,14 +3,21 @@ import * as React from "react";
 // import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
+import {LoginButton} from './LoginButton';
+import {useAuth0} from '@auth0/auth0-react';
 
 export default function Homepage() {
+
+  const {user, isAuthenticated} = useAuth0();
+ 
+
   return (
     <>
       <div className="columns-container">
         <div className="sides">
           {/* ---WelcomeBox--- */}
-          <div className="app">Welcome</div>
+          <div className="app" children={`Welcome ${isAuthenticated ? user.name : "no name"}`}/>
+          <div className="app" children={`UserId: ${isAuthenticated ? user.sub : "?"}`}/>
           {/* ---HighScoresBox--- */}
           <div className="app large2">HighScores</div>
         </div>
@@ -30,7 +37,9 @@ export default function Homepage() {
         </div>
         <div className="sides">
           {/* ---Login/SignupBox--- */}
-          <div className="app large">Login/Signup</div>
+          <div className="app large">Login/Signup
+          <LoginButton />
+          </div>
           <div className="app">
             {/* ---GameBox--- */}
             <div className="align-vertical">
