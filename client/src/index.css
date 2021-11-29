@@ -24,6 +24,10 @@ body::-webkit-scrollbar {
   color: #ffffff;
 }
 
+.brand{
+  min-width: 20px;
+}
+
 .Login-LogoutBtn{
   text-decoration: none;
   color:rgb(31, 31, 31);
@@ -390,8 +394,74 @@ button svg {
     top: 550px;
     flex-direction: column;
     max-height: 100vh;
+    margin: auto;
   }
+
 }
+
+@media only screen and (max-width: 425px) {
+  .app, .app-ins{
+    top: 50px;
+    width: 350px;
+  }
+  
+  #basic-navbar-nav {
+    position:relative;
+  }
+  
+}
+
+@media only screen and (max-width: 375px) {
+
+  body{
+    margin-bottom: 20px;
+  }
+
+  .app, .app-ins{
+    top: 50px;
+    width: 320px;
+  }
+  
+  #basic-navbar-nav {
+    position:relative;
+  }
+  
+}
+
+@media only screen and (max-width: 320px) {
+
+  body{
+    margin-bottom: 20px;
+  }
+
+  .app, .app-ins{
+    top: 50px;
+    width: 300px;
+  }
+  
+  #basic-navbar-nav {
+    position:relative;
+  }
+  
+}
+
+@media only screen and (max-width: 250px) {
+
+  body{
+    margin-bottom: 20px;
+  }
+
+  .app, .app-ins{
+    top: 50px;
+    width: 230px;
+  }
+  
+  #basic-navbar-nav {
+    position:relative;
+  }
+  
+}
+
 
 /* PROFILE PAGE */
 
