@@ -32,6 +32,11 @@ body {
 /* NAV BAR */
 #basic-navbar-nav {
   justify-content: flex-end;
+  text-align: center;
+}
+
+.nav-link{
+  margin: auto !important;
 }
 
 .navContainer {
@@ -61,6 +66,15 @@ body {
   display: flex;
   height: 35px;
   width: 35px;
+  border-radius: 100px;
+}
+
+.thumbnail-img-user {
+  display: flex;
+  height: 35px;
+  width: 35px;
+  border-radius: 100px;
+  display:none;
 }
 
 .columns-container {
@@ -88,7 +102,13 @@ body {
   padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+}
+
+.Login-LogoutBtn{
+  height: 38px;
+
 }
 
 .large2 {
