@@ -8,6 +8,10 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: scroll; 
+  background-color: #7cc6fe;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -19,24 +23,45 @@ body::-webkit-scrollbar {
   color: #ffffff;
 }
 
-a {
-  text-align: center;
+.Login-LogoutBtn{
+  padding-left: ;
+  text-decoration: none;
+  color:rgb(31, 31, 31);
+  font-weight: 500;
 }
 
-body {
-  background-color: #7cc6fe;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+a{
+  padding: 8px;
+  text-align: center;
+
 }
+
+ a:link, a:active, a:visited {
+
+}
+
 /* NAV BAR */
 #basic-navbar-nav {
   justify-content: flex-end;
   text-align: center;
 }
 
-.nav-link{
+.nav-item{
   margin: auto !important;
+  /* margin-right: 5px !important; */
+  padding: 4px;
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+
+}
+
+.nav-item:active, .nav-item:visited,.nav-item:link{
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+
+.nav-item:hover{
+  color:rgba(52, 52, 52, 0.714);
 }
 
 .navContainer {
@@ -47,6 +72,8 @@ body {
 #basic-nav-dropdown {
   display: flex;
 }
+
+
 
 .dropdown-toggle::after {
   margin-left: 0px !important;
