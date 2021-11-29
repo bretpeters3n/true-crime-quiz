@@ -7,12 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow-y: scroll; 
+  overflow-y: scroll;
   background-color: #7cc6fe;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-
 }
 
 body::-webkit-scrollbar {
@@ -24,25 +23,24 @@ body::-webkit-scrollbar {
   color: #ffffff;
 }
 
-.brand{
+.brand {
   min-width: 20px;
 }
 
-.Login-LogoutBtn{
+.Login-LogoutBtn {
   text-decoration: none;
-  color:rgb(31, 31, 31);
+  color: rgb(31, 31, 31);
   font-weight: 500;
 }
 
-.Login-LogoutBtn:hover{
-  color:rgb(79, 79, 79);
+.Login-LogoutBtn:hover {
+  color: rgb(79, 79, 79);
   cursor: pointer;
 }
 
-a{
+a {
   padding: 8px;
   text-align: center;
-
 }
 
 /* NAV BAR */
@@ -51,22 +49,20 @@ a{
   text-align: center;
 }
 
-.nav-item{
+.nav-item {
   margin: auto !important;
   /* margin-right: 5px !important; */
   padding: 4px;
   font-family: "Helvetica Neue";
   font-weight: 400;
-
-
 }
 
-.nav-item:hover{
-  background-color:red;
+.nav-item:hover {
+  background-color: red;
 }
 
-.drop-item{
-  color:rgb(31, 31, 31);
+.drop-item {
+  color: rgb(31, 31, 31);
   width: 158px;
   /* margin: auto !important; */
   /* margin-right: 5px !important; */
@@ -77,18 +73,20 @@ a{
   text-decoration: none;
 }
 
-.drop-item:hover{
+.drop-item:hover {
   background-color: rgba(255, 255, 255, 0.714);
-  color:rgb(31, 31, 31);
+  color: rgb(31, 31, 31);
 }
 
-.nav-item:active, .nav-item:visited,.nav-item:link{
+.nav-item:active,
+.nav-item:visited,
+.nav-item:link {
   text-decoration: none;
   color: rgb(31, 31, 31);
 }
 
-.nav-item:hover{
-  color:rgba(52, 52, 52, 0.714);
+.nav-item:hover {
+  color: rgba(52, 52, 52, 0.714);
 }
 
 .navContainer {
@@ -126,7 +124,7 @@ a{
   height: 35px;
   width: 35px;
   border-radius: 100px;
-  display:none;
+  display: none;
 }
 
 .columns-container {
@@ -158,7 +156,7 @@ a{
   align-items: center;
 }
 
-.Login-LogoutBtn{
+.Login-LogoutBtn {
   height: 38px;
 }
 
@@ -195,15 +193,15 @@ a{
   justify-content: space-evenly;
 }
 
-h4{
+h4 {
   display: none;
 }
 
-h3{
+h3 {
   font-weight: bolder;
 }
 
-.addQuestionIns{
+.addQuestionIns {
   font-size: 10.4px;
   color: rgba(255, 255, 255, 0.714);
   margin-bottom: 1px;
@@ -226,13 +224,12 @@ form {
   gap: 12px;
 }
 
-
 .vertAlign {
   display: flex;
   flex-direction: column;
 }
 
-.yourQuestion{
+.yourQuestion {
   border-radius: 12px;
   resize: none;
   padding: 7px;
@@ -241,14 +238,14 @@ form {
   height: 70px;
 }
 
-.yourAnswer{
+.yourAnswer {
   border-radius: 6px;
   padding: 2px;
   padding-left: 3px;
   width: 75%;
 }
 
-.submitBtn{
+.submitBtn {
   margin-top: 10px;
 }
 
@@ -262,7 +259,44 @@ form {
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: center;
-  
+
+  /* justify-content: space-evenly;
+  justify-content: space-between; */
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 1);
+}
+
+.questionBox {
+  border: 1px solid white;
+  margin: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.questionBoxControls {
+  display: flex;
+  flex-direction: row;
+}
+
+.app-profile-questions {
+  background-color: #252d4a;
+  width: 400px;
+  min-height: 200px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   /* justify-content: space-evenly;
   justify-content: space-between; */
 }
@@ -281,12 +315,11 @@ form {
   font-size: 19px;
 }
 
-.ins-container{
+.ins-container {
   top: 100px;
 }
 
-.app-ins p{
-  
+.app-ins p {
 }
 
 .app-ins h2 {
@@ -396,72 +429,67 @@ button svg {
     max-height: 100vh;
     margin: auto;
   }
-
 }
 
 @media only screen and (max-width: 425px) {
-  .app, .app-ins{
+  .app,
+  .app-ins {
     top: 50px;
     width: 350px;
   }
-  
+
   #basic-navbar-nav {
-    position:relative;
+    position: relative;
   }
-  
 }
 
 @media only screen and (max-width: 375px) {
-
-  body{
+  body {
     margin-bottom: 20px;
   }
 
-  .app, .app-ins{
+  .app,
+  .app-ins {
     top: 50px;
     width: 320px;
   }
-  
+
   #basic-navbar-nav {
-    position:relative;
+    position: relative;
   }
-  
 }
 
 @media only screen and (max-width: 320px) {
-
-  body{
+  body {
     margin-bottom: 20px;
   }
 
-  .app, .app-ins{
+  .app,
+  .app-ins {
     top: 50px;
     width: 300px;
   }
-  
+
   #basic-navbar-nav {
-    position:relative;
+    position: relative;
   }
-  
 }
 
 @media only screen and (max-width: 250px) {
-
-  body{
+  body {
     margin-bottom: 20px;
   }
 
-  .app, .app-ins{
+  .app,
+  .app-ins {
     top: 50px;
     width: 230px;
   }
-  
-  #basic-navbar-nav {
-    position:relative;
-  }
-  
-}
 
+  #basic-navbar-nav {
+    position: relative;
+  }
+}
 
 /* PROFILE PAGE */
 
@@ -479,6 +507,7 @@ button svg {
   justify-content: space-between; */
 }
 
-.app-profile input, textarea{
+.app-profile input,
+textarea {
   border-radius: 12px;
 }

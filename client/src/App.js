@@ -8,34 +8,35 @@ import NavTabs from "./components/NavTabs";
 import Homepage from "./components/Homepage";
 import Game from "./components/Game";
 import AddQuestion from "./components/AddQuestion";
+import EditQuestion from "./components/EditQuestion";
 import Profile from "./components/Profile";
 import { UserContext, UserProvider } from "./utils/UserContext";
 import LoginSignUp from "./components/LoginSignUp";
 import Test from "./components/Login";
-import {Auth0Provider} from '@auth0/auth0-react';
+import { Auth0Provider } from "@auth0/auth0-react";
 export default function App() {
-  return (<Auth0Provider
-    domain="dev-r9whaml0.us.auth0.com"
-    clientId="2f36QL7XqWEwxBXKVjDy7j6x2AndBmic"
-    redirectUri={window.location.origin}
-  >
-    <UserProvider>
-    <div>
-      <Router>
-        <NavTabs />
-        <Routes>
-          <Route exact path="/" element={<Homepage />} />
-          <Route exact path="/game" element={<Game />} />
-          <Route exact path="/addquestion" element={<AddQuestion />} />
-          <Route exact path="/profile" element={<Profile />} />
-          <Route exact path="/login" element={<LoginSignUp />} />
-          <Route exact path="/test" element={<Test />} />
-        </Routes>
-      </Router>
-    </div>
-    </UserProvider>
-  </Auth0Provider>
-
+  return (
+    <Auth0Provider
+      domain="dev-r9whaml0.us.auth0.com"
+      clientId="2f36QL7XqWEwxBXKVjDy7j6x2AndBmic"
+      redirectUri={window.location.origin}
+    >
+      <UserProvider>
+        <div>
+          <Router>
+            <NavTabs />
+            <Routes>
+              <Route exact path="/" element={<Homepage />} />
+              <Route exact path="/game" element={<Game />} />
+              <Route exact path="/addquestion" element={<AddQuestion />} />
+              <Route exact path="/editquestion" element={<EditQuestion />} />
+              <Route exact path="/profile" element={<Profile />} />
+              <Route exact path="/login" element={<LoginSignUp />} />
+              <Route exact path="/test" element={<Test />} />
+            </Routes>
+          </Router>
+        </div>
+      </UserProvider>
+    </Auth0Provider>
   );
 }
- 
