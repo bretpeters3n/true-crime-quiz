@@ -3,13 +3,12 @@ import { useAuth0 } from '@auth0/auth0-react';
 export const UserContext = createContext();
 export const useUserContext = () => useContext(UserContext);
 
-
-
 export const UserProvider = ({ children }) => {
 
     const [userState, setUserState] = useState(
         {
             name: "",
+            id: "",
         }
     );
 

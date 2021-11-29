@@ -21,8 +21,8 @@ export default function App() {
   >
     <UserProvider>
     <div>
-      <NavTabs />
       <Router>
+        <NavTabs />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/game" element={<Game />} />

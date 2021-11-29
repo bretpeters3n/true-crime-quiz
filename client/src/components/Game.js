@@ -62,37 +62,9 @@ export default function Game() {
 
     console.log("updatedData is now: " + JSON.stringify(updatedData));
     console.log("data is now: " + JSON.stringify(data));
-    // console log both arrays out
-    // then...
     setQuestions(updatedData);
     setRenderReady(true);
   };
-
-  // BACKUP FUNCTION COPY (messy)
-  // const setXQuestions = async (data) => {
-  //   // const numberOfQuestions = 5;
-  //   console.log("setXQuestions function entered");
-  //   console.log(
-  //     "There are " + data.length + " questions in the question array"
-  //   );
-
-  //   // for (let num = data.length - 1; num >= numberOfQuestions; num--) {
-  //   //   // Runs 5 times, with values of step 0 through 4.
-  //   //   console.log("Going through for loop");
-  //   //   const randomItem = await data[Math.floor(Math.random() * data.length)];
-  //   //   console.log("randomItem = " + JSON.stringify(randomItem));
-  //   //   console.log("_id of randomItem is " + randomItem._id);
-  //   //   const updatedData = data.filter((item) => item._id !== randomItem._id);
-  //   // }
-  //   const randomItem = await data[Math.floor(Math.random() * data.length)];
-  //   console.log("randomItem = " + JSON.stringify(randomItem));
-  //   console.log("_id of randomItem is " + randomItem._id);
-  //   // data = data.splice(data.indexOf(randomItem), 1);
-  //   const updatedData = data.filter((item) => item._id !== randomItem._id);
-  //   console.log("data now contains " + JSON.stringify(updatedData));
-  //   setQuestions(data);
-  //   setRenderReady(true);
-  // };
 
   useEffect(() => {
     getQuestionsFromDB();
