@@ -29,7 +29,7 @@ export default function Homepage() {
           {/* ---WelcomeBox--- */}
           <div
             className="app welcome"
-            children={`Welcome ${isAuthenticated ? user.name : ""}`}
+            children={`Welcome ${isAuthenticated ? user.given_name : ""}`}
           />
           {/* <img className="app" src={`${isAuthenticated ? user.picture : "?"}`}/> */}
           {/* ---HighScoresBox--- */}
