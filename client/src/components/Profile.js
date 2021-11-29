@@ -1,10 +1,7 @@
 import * as React from "react";
-
 import { useState, useEffect } from "react";
 import { UserContext } from "../utils/UserContext";
 import { useAuth0 } from "@auth0/auth0-react";
-
-
 
 export default function Profile() {
 
@@ -66,7 +63,6 @@ export default function Profile() {
     <UserContext.Consumer>
       
       {value => {
-
         if (!value.sub || !value.name || !questions) {
           console.log(questions);
           return (
@@ -133,6 +129,7 @@ export default function Profile() {
             </div>
           </div>
         }
+
       }
       }
     </UserContext.Consumer>
