@@ -39,6 +39,10 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
+/* .login-btn-home{
+  color: red !important;
+} */
+
 a{
   padding: 8px;
   text-align: center;
@@ -144,7 +148,7 @@ a{
   flex-direction: column;
   height: 600px;
 }
-.large {
+.app-large {
   margin-bottom: 15px;
   background-color: #252d4a;
   width: 400px;
@@ -154,12 +158,40 @@ a{
   padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+.app-large p{
+  font-size: 10px;
+  color:rgba(255, 255, 255, 0.714);
+}
+
+.privacy:link, .privacy:active, .privacy:visited{
+  color:rgba(255, 255, 255, 0.714);
+  text-decoration: none;
+}
+
+.privacy:hover{
+  color: white;
 }
 
 .Login-LogoutBtn{
   height: 38px;
+}
+
+#login-home{
+  color:rgb(255, 255, 255) !important;
+  width: 102px;
+  background-color: #0d6efd;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#login-home:hover{
+  background-color: rgb(18, 94, 244);
 }
 
 .large2 {
@@ -265,6 +297,13 @@ form {
   
   /* justify-content: space-evenly;
   justify-content: space-between; */
+}
+
+.welcome{
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
 }
 
 .app-ins {
@@ -389,6 +428,10 @@ button svg {
   margin-right: 5px;
 }
 
+.small-screen{
+  display: none;
+}
+
 @media only screen and (max-width: 1100px) {
   .columns-container {
     top: 550px;
@@ -397,6 +440,13 @@ button svg {
     margin: auto;
   }
 
+}
+
+@media only screen and (max-width: 518px) {
+  .nav-item{
+    display: none;
+  }
+  
 }
 
 @media only screen and (max-width: 425px) {
