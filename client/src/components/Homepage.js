@@ -16,8 +16,8 @@ export default function Homepage() {
       <div className="columns-container">
         <div className="sides">
           {/* ---WelcomeBox--- */}
-          <div className="app" children={`Welcome ${isAuthenticated ? user.name : "no name"}`}/>
-          <div className="app" children={`UserId: ${isAuthenticated ? user.sub : "?"}`}/>
+          <div className="app" children={`Welcome ${isAuthenticated ? user.name : ""}`}/>
+          {/* <img className="app" src={`${isAuthenticated ? user.picture : "?"}`}/> */}
           {/* ---HighScoresBox--- */}
           <div className="app large2">HighScores</div>
         </div>
@@ -37,7 +37,7 @@ export default function Homepage() {
         </div>
         <div className="sides">
           {/* ---Login/SignupBox--- */}
-          <div className="app large">Login/Signup
+          <div className="app large">
           <LoginButton />
           </div>
           <div className="app">

@@ -11,6 +11,7 @@ import AddQuestion from "./components/AddQuestion";
 import Profile from "./components/Profile";
 import { UserContext, UserProvider } from "./utils/UserContext";
 import LoginSignUp from "./components/LoginSignUp";
+import Test from "./components/Login";
 import {Auth0Provider} from '@auth0/auth0-react';
 export default function App() {
   return (<Auth0Provider
@@ -28,6 +29,7 @@ export default function App() {
           <Route exact path="/addquestion" element={<AddQuestion />} />
           <Route exact path="/profile" element={<Profile />} />
           <Route exact path="/login" element={<LoginSignUp />} />
+          <Route exact path="/test" element={<Test />} />
         </Routes>
       </Router>
     </div>

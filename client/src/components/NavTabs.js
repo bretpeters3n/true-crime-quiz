@@ -4,8 +4,14 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Test from "../Nav-icons/testnavavatar.jpg";
+import { useAuth0 } from '@auth0/auth0-react';
+import { UserContext } from "../utils/UserContext";
+
+
+
 
 function NavTabs({ currentPage, handlePageChange }) {
+  const { user, isAuthenticated, isLoading } = useAuth0();
   return (
     <Navbar bg="light">
       <Container className="navContainer">
@@ -18,7 +24,8 @@ function NavTabs({ currentPage, handlePageChange }) {
             <NavDropdown
               title={
                 <div className="nav-icon">
-                  <img className="thumbnail-img" src={Test} alt="user pic" />
+                  <img className="thumbnail-img" src={`${!isAuthenticated ? Test : ""}`} onError={(event) => event.target.style.display = 'none'} alt="test pic" />
+                  <img className="thumbnail-img-user" src={`${isAuthenticated ? user.picture : ""}`} onLoad={(event) => event.target.style.display = 'inline-block'} alt="user pic" />
                   &#8964;
                 </div>
               }
@@ -35,6 +42,6 @@ function NavTabs({ currentPage, handlePageChange }) {
       </Container>
     </Navbar>
   );
-}
+};
 
 export default NavTabs;

@@ -18,7 +18,6 @@ export const UserProvider = ({ children }) => {
     useEffect(() => {
         if (isAuthenticated && user) {
             console.log(`isAuthenticated`, user)
-            debugger;
             // check if user is authenticated
             // Auth.login(JSON.stringify(user));
             setUserState({
