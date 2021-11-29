@@ -1,6 +1,7 @@
 import * as React from "react";
 import Button from "react-bootstrap/Button";
 import { useState, useEffect } from "react";
+import { UserContext } from "../utils/UserContext";
 
 // import ReactDOM from "react-dom";
 // import Button from "@mui/material/Button";
@@ -14,29 +15,42 @@ export default function AddQuestion() {
   const [answerText3, setAnswerText3] = useState("");
   const [answerText4, setAnswerText4] = useState("");
 
-
   async function writeQuestionToDb() {
-    const response = await fetch('/api/questions/new', {
-      method: 'POST',
+    const response = await fetch("/api/questions/new", {
+      method: "POST",
       body: JSON.stringify({
         questionText: questionText,
-        answerOptions: [answerText1, answerText2, answerText3, answerText4] 
-
-        //get user id from url 
-        // user_id: req.params.id
-
+        answerOptions: [
+          {
+            answerText: answerText1,
+            isCorrect: true,
+          },
+          {
+            answerText: answerText2,
+            isCorrect: false,
+          },
+          {
+            answerText: answerText3,
+            isCorrect: false,
+          },
+          {
+            answerText: answerText4,
+            isCorrect: false,
+          },
+        ],
+        auth_id: "google-oauth2|107644464119450733925",
       }),
-      headers: { 'Content-Type': 'application/json' },
+      headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace('/');
-      alert('youre in!')
+      document.location.replace("/");
+      alert("youre in!");
     } else {
-      alert('Failed to submit question, try again!');
+      alert("Failed to submit question, try again!");
     }
-  };
- 
+  }
+
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { name, value } = e.target;
@@ -62,7 +76,6 @@ export default function AddQuestion() {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
     writeQuestionToDb();
-
 
     // Alert the user their first and last name, clear the inputs
     // alert(`Hello ${firstName} ${lastName}`);
@@ -138,7 +151,7 @@ export default function AddQuestion() {
             className="submitBtn"
             variant="success"
             type="button"
-    onClick={handleFormSubmit}
+            onClick={handleFormSubmit}
           >
             Submit
           </Button>
