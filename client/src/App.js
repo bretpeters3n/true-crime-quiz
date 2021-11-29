@@ -35,5 +35,7 @@ export default function App() {
     </div>
     </UserProvider>
   </Auth0Provider>
+
   );
 }
+ 
