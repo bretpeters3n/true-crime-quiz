@@ -15,8 +15,9 @@ router.get("/all", (req, res) => {
 });
 
 router.get("/:id", ({ params }, res) => {
-  Question.findById({
-    _id: mongojs.ObjectId(params.id),
+  console.log(params);
+  Question.find({
+    auth_id: params.id,
   })
     .then((dbquestion) => {
       res.json(dbquestion);

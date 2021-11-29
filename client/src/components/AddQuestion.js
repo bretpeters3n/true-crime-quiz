@@ -4,7 +4,6 @@ import { useState } from "react";
 import { UserContext } from "../utils/UserContext";
 import { useAuth0 } from '@auth0/auth0-react';
 
-
 export default function AddQuestion() {
   const { user, isAuthenticated } = useAuth0();
 
@@ -17,8 +16,6 @@ export default function AddQuestion() {
   const [checkBox2, setCheckbox2] = useState(false);
   const [checkBox3, setCheckbox3] = useState(false);
   const [checkBox4, setCheckbox4] = useState(false);
-  const [auth, setAuth] = useState("");
-  
 
   async function writeQuestionToDb() {
     const response = await fetch("/api/questions/new", {
@@ -96,81 +93,88 @@ export default function AddQuestion() {
   return (
     <UserContext.Consumer>
       {value => {
-        console.log("value", value);
-        console.log("sub", value.sub);
-        return <div className="columns-container">
-          <div className="addQuestion-app">
-            <form className="form">
-              <h3>Add a custom question!</h3>
-              <h4>{value.sub}</h4>
-              <p className="addQuestionIns">
-                Enter your question, answers, and choose which one will be correct.
-              </p>
-              <textarea
-                className="yourQuestion"
-                value={questionText}
-                name="questionText"
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Your Question"
-              />
-              <div className="sideBySideInputs">
-                <input
-                  className="yourAnswer"
-                  value={answerText1}
-                  name="answerText1"
+        if (!value.sub || !value.name) {
+          console.log("value", value);
+          console.log("sub", value.sub);
+          return (
+            <div>
+              Loading...
+            </div>
+          )
+        } else {
+          return <div className="columns-container">
+            <div className="addQuestion-app">
+              <form className="form">
+                <h3>Add a custom question!</h3>
+                <p className="addQuestionIns">
+                  Enter your question, answers, and choose which one will be correct.
+                </p>
+                <textarea
+                  className="yourQuestion"
+                  value={questionText}
+                  name="questionText"
                   onChange={handleInputChange}
                   type="text"
-                  placeholder="Answer 1"
+                  placeholder="Your Question"
                 />
-                <input type="radio" value={checkBox1} name="checkbox1" onChange={handleInputChange}/> Correct
-              </div>
-              <div className="sideBySideInputs">
-                <input
-                  className="yourAnswer"
-                  value={answerText2}
-                  name="answerText2"
-                  onChange={handleInputChange}
-                  type="text"
-                  placeholder="Answer 2"
-                />
-                <input type="radio" value={checkBox2} name="checkbox2" onChange={handleInputChange}/> Correct
-              </div>
-              <div className="sideBySideInputs">
-                <input
-                  className="yourAnswer"
-                  value={answerText3}
-                  name="answerText3"
-                  onChange={handleInputChange}
-                  type="text"
-                  placeholder="Answer 3"
-                />
-                <input type="radio" value={checkBox3} name="checkbox3" onChange={handleInputChange}/> Correct
-                
-              </div>
-              <div className="sideBySideInputs">
-                <input
-                  className="yourAnswer"
-                  value={answerText4}
-                  name="answerText4"
-                  onChange={handleInputChange}
-                  type="text"
-                  placeholder="Answer 4"
-                />
-                <input type="radio" value={checkBox4} name="checkbox4" onChange={handleInputChange}/> Correct
-              </div>
-              <Button
-                className="submitBtn"
-                variant="success"
-                type="button"
-                onClick={handleFormSubmit}
-              >
-                Submit
-              </Button>
-            </form>
+                <div className="sideBySideInputs">
+                  <input
+                    className="yourAnswer"
+                    value={answerText1}
+                    name="answerText1"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="Answer 1"
+                  />
+                  <input type="radio" value={checkBox1} name="checkbox1" onChange={handleInputChange}/> Correct
+                </div>
+                <div className="sideBySideInputs">
+                  <input
+                    className="yourAnswer"
+                    value={answerText2}
+                    name="answerText2"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="Answer 2"
+                  />
+                  <input type="radio" value={checkBox2} name="checkbox2" onChange={handleInputChange}/> Correct
+                </div>
+                <div className="sideBySideInputs">
+                  <input
+                    className="yourAnswer"
+                    value={answerText3}
+                    name="answerText3"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="Answer 3"
+                  />
+                  <input type="radio" value={checkBox3} name="checkbox3" onChange={handleInputChange}/> Correct
+                  
+                </div>
+                <div className="sideBySideInputs">
+                  <input
+                    className="yourAnswer"
+                    value={answerText4}
+                    name="answerText4"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="Answer 4"
+                  />
+                  <input type="radio" value={checkBox4} name="checkbox4" onChange={handleInputChange}/> Correct
+                </div>
+                <Button
+                  className="submitBtn"
+                  variant="success"
+                  type="button"
+                  onClick={handleFormSubmit}
+                >
+                  Submit
+                </Button>
+              </form>
+            </div>
           </div>
-        </div>
-      }}
+        }}
+      }
     </UserContext.Consumer>
   );
 }
