@@ -43,21 +43,21 @@ router.put("/update/:id", (req, res) => {
   );
 });
 
+router.post("/new", ({ body }, res) => {
+  // const question = new Question({
+  //     questionText: req.body.questionText,
+  //     answerOptions: req.body.answerOptions
+  // })
+  const question = body;
+  console.log(body);
 
-router.post("/new", ({body}, res) => {
-    // const question = new Question({
-    //     questionText: req.body.questionText,
-    //     answerOptions: req.body.answerOptions
-    // })
-    const question = body;
-
-    Question.create(question, (error, saved) => {
-        if (error) {
-            console.log(error);
-        } else {
-            res.send(saved);
-        }
-    });
+  Question.create(question, (error, saved) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.send(saved);
+    }
+  });
 });
 
 router.delete("/delete/:id", (req, res) => {
