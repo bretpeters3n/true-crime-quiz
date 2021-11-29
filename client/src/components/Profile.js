@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useUserContext } from "../utils/UserContext";
 import { UserContext } from "../utils/UserContext"
 // import Form from "react-bootstrap/Form";
-// import Button from "react-bootstrap/Button";
+import Button from "react-bootstrap/Button";
 
 // import ReactDOM from "react-dom";
 // import Button from "@mui/material/Button";
@@ -53,7 +53,7 @@ export default function Profile() {
       {value => {
 console.log("value", value);
         return <div className="columns-container">
-          <div className="app">
+          <div className="app-profile">
             <form className="form">
               <h3>Profile</h3>
               <label className="vertAlign">

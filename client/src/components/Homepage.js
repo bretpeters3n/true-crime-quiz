@@ -22,23 +22,19 @@ export default function Homepage() {
           {/* ---HighScoresBox--- */}
           <div className="app large2">
             {" "}
-            <Link to="/profile">
-              <h3>please work</h3>
-            </Link>
+
           </div>
         </div>
         {/* ---InstructionsBox--- */}
         <div className="app-ins">
-          <h2>Instructions</h2>
+          <h2 style={{display: 'flex'}}>Instructions</h2>
           <p>
             Aliquam pellentesque sodales commodo. Aenean eu interdum enim.
             Aenean at purus rhoncus, mollis est eu, venenatis magna.
             Pellentesque posuere placerat lectus, id aliquam sapien varius non.
             Donec vulputate, orci a iaculis consectetur, ante nulla pretium est,
             quis accumsan risus diam nec ante. Suspendisse dictum fermentum
-            felis eget lobortis. Phasellus pharetra nisi eros, a imperdiet nisi
-            sollicitudin vel. Nullam id lacinia augue. Ut lacinia leo a diam
-            congue scelerisque. Cras vehicula a velit ac ultrices.
+ 
           </p>
         </div>
         <div className="sides">

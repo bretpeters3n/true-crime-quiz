@@ -55,7 +55,10 @@ function NavTabs({ currentPage, handlePageChange }) {
               >
                 <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
                 <NavDropdown.Item href="/game">Game</NavDropdown.Item>
-                <NavDropdown.Item href="/login"></NavDropdown.Item>
+                <Nav.Item>
+                <Link className="drop-item" to="/profile">Testy</Link>
+                </Nav.Item>
+                <NavDropdown.Item disabled href="#">Questions</NavDropdown.Item>
                 <NavDropdown.Divider />
                 {/* <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item> */}
                 <LoginButton />
