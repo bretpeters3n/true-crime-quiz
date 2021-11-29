@@ -6,8 +6,8 @@ export const LoginButton = () => {
     const { loginWithRedirect, user, isAuthenticated, logout } = useAuth0();
 
     return isAuthenticated
-        ? <Button className="Login-LogoutBtn" onClick={() => logout({ returnTo: window.location.origin })}>
+        ? <a className="Login-LogoutBtn" onClick={() => logout({ returnTo: window.location.origin })}>
             Log out
-        </Button>
-        : <Button className="Login-LogoutBtn" onClick={() => loginWithRedirect()}>Log in</Button>;
+        </a>
+        : <a className="Login-LogoutBtn" onClick={() => loginWithRedirect()}>Log in</a>;
 };
