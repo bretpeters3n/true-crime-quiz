@@ -22,7 +22,7 @@ function NavTabs({ currentPage, handlePageChange }) {
               src={logo}
               width="auto"
               height="50"
-              className="d-inline-block align-top"
+              className="d-inline-block align-top brand"
               alt="True Crime Quiz Logo"
             />
           </Navbar.Brand>

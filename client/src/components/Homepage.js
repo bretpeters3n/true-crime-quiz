@@ -27,7 +27,8 @@ export default function Homepage() {
         </div>
         {/* ---InstructionsBox--- */}
         <div className="app-ins">
-          <h2 style={{display: 'flex'}}>Instructions</h2>
+          <div className="ins-container">
+          <h2>Instructions</h2>
           <p>
             Aliquam pellentesque sodales commodo. Aenean eu interdum enim.
             Aenean at purus rhoncus, mollis est eu, venenatis magna.
@@ -36,6 +37,7 @@ export default function Homepage() {
             quis accumsan risus diam nec ante. Suspendisse dictum fermentum
  
           </p>
+         </div> 
         </div>
         <div className="sides">
           {/* ---Login/SignupBox--- */}
