@@ -14,6 +14,19 @@ router.get("/all", (req, res) => {
     });
 });
 
+router.get("/question/:id", ({ params }, res) => {
+  console.log(params);
+  Question.findById({
+    _id: mongojs.ObjectId(params.id),
+  })
+    .then((dbquestion) => {
+      res.json(dbquestion);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
+
 router.get("/:id", ({ params }, res) => {
   console.log(params);
   Question.find({

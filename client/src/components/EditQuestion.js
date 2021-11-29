@@ -5,7 +5,7 @@ import { UserContext } from "../utils/UserContext";
 import { useAuth0 } from "@auth0/auth0-react";
 import { QuestionCard } from "./QuestionCard.js";
 
-export default function AddQuestion() {
+export default function EditQuestion(props) {
   const { user, isAuthenticated } = useAuth0();
 
   const [questionText, setQuestionText] = useState("");
@@ -19,12 +19,22 @@ export default function AddQuestion() {
   const [checkBox4, setCheckbox4] = useState(false);
 
   async function grabQuestion(id) {
+    console.log("Id is: " + id);
     const response = await fetch(`/api/questions/question/${id}`);
     const data = await response.json();
     console.log(data);
+    setQuestionText(data.questionText);
+    setAnswerText1(data.answerOptions[0]);
+    setAnswerText2(data.answerText2);
+    setAnswerText3(data.answerText3);
+    setAnswerText4(data.answerText4);
+    setCheckbox1(data.checkBox1);
+    setCheckbox2(data.checkBox2);
+    setCheckbox3(data.checkBox3);
+    setCheckbox4(data.checkBox4);
   }
 
-  grabQuestion("61a4330b3f77572bc7b39700");
+  grabQuestion("61a53b7cc51c0381f368d902");
 
   async function writeQuestionToDb() {
     const response = await fetch("/api/questions/new", {
@@ -107,7 +117,7 @@ export default function AddQuestion() {
         } else {
           return (
             <QuestionCard
-              edit="Add a Question"
+              edit={"Edit Question"}
               questionText={questionText}
               answerText1={answerText1}
               answerText2={answerText2}
