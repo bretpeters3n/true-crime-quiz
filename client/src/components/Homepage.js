@@ -3,23 +3,29 @@ import * as React from "react";
 // import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import {LoginButton} from './LoginButton';
-import {useAuth0} from '@auth0/auth0-react';
+import { LoginButton } from "./LoginButton";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Homepage() {
-
-  const {user, isAuthenticated} = useAuth0();
- 
+  const { user, isAuthenticated } = useAuth0();
 
   return (
     <>
       <div className="columns-container">
         <div className="sides">
           {/* ---WelcomeBox--- */}
-          <div className="app" children={`Welcome ${isAuthenticated ? user.name : ""}`}/>
+          <div
+            className="app"
+            children={`Welcome ${isAuthenticated ? user.name : ""}`}
+          />
           {/* <img className="app" src={`${isAuthenticated ? user.picture : "?"}`}/> */}
           {/* ---HighScoresBox--- */}
-          <div className="app large2">HighScores</div>
+          <div className="app large2">
+            {" "}
+            <Link to="/profile">
+              <h3>please work</h3>
+            </Link>
+          </div>
         </div>
         {/* ---InstructionsBox--- */}
         <div className="app-ins">
@@ -38,14 +44,14 @@ export default function Homepage() {
         <div className="sides">
           {/* ---Login/SignupBox--- */}
           <div className="app large">
-          <LoginButton />
+            <LoginButton />
           </div>
           <div className="app">
             {/* ---GameBox--- */}
             <div className="align-vertical">
               Let's get started.
               <br />
-              <Link to="/game">
+              <Link to="/profile">
                 <Button variant="primary">Start Game!</Button>
               </Link>
             </div>
