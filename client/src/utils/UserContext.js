@@ -22,6 +22,7 @@ export const UserProvider = ({ children }) => {
             // Auth.login(JSON.stringify(user));
             setUserState({
                 name: user.name,
+                sub: user.sub
             })
             console.log(`userState`, userState)
         }
