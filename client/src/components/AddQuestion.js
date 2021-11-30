@@ -24,7 +24,7 @@ export default function AddQuestion() {
     console.log(data);
   }
 
-  grabQuestion("61a4330b3f77572bc7b39700");
+  // grabQuestion("61a4330b3f77572bc7b39700");
 
   async function writeQuestionToDb() {
     const response = await fetch("/api/questions/new", {
