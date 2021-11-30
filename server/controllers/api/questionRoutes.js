@@ -84,15 +84,16 @@ router.delete("/delete/:id", (req, res) => {
     {
       _id: mongojs.ObjectId(req.params.id),
     },
-    (error) => {
+    (error, edited) => {
       if (error) {
-        console.log(error);
-        res.send(error);
+          console.log(error);
+          res.send(error);
       } else {
-        console.log("deleted!");
+          res.send(edited);
       }
-    }
-  );
+  }
+);
 });
+
 
 module.exports = router;

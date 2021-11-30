@@ -41,9 +41,8 @@ export default function Profile() {
     }
     let id = user.sub;
     const response = await fetch(`/api/questions/${id}`);
-    response.json().then((data) => {
-      setQuestions(data);
-    });
+    const data = await response.json();
+    return data;
   };
 
   function deleteQuestionFromDB(id) {
@@ -54,6 +53,7 @@ export default function Profile() {
         method: "DELETE",
       }).then(() => {
         console.log("removed");
+        window.location.reload(true);
         // remove question from array
         // questions
         // setQuestions(data);
@@ -63,11 +63,11 @@ export default function Profile() {
     }
   }
 
-  useEffect(() => {
-    let questionData = getQuestionsByAuth();
-
+  useEffect(async () => {
+    let questionData = await getQuestionsByAuth();
+    setQuestions(questionData);
     console.log(questions);
-  }, []);
+  }, [user]);
 
   function makeQuestionCards() {}
 
@@ -156,7 +156,7 @@ export default function Profile() {
                           <div>
                             <Button
                               variant="danger"
-                              onClick={deleteQuestionFromDB(questionObj._id)}
+                              onClick={() => deleteQuestionFromDB(questionObj._id)}
                             >
                               Delete
                             </Button>
