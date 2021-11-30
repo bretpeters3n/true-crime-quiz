@@ -101,6 +101,7 @@ export default function Profile() {
                   <label className="vertAlign">
                     Bio
                     <textarea
+                      className="bio"
                       value={bioText}
                       name="bioText"
                       onChange={handleInputChange}
@@ -108,12 +109,12 @@ export default function Profile() {
                       placeholder="Your bio goes here"
                     />
                   </label>
-                  <button type="button" onClick={handleFormSubmit}>
+                  <Button type="button" variant="success" onClick={handleFormSubmit}>
                     Submit
-                  </button>
+                  </Button>
                 </form>
                 <div>
-                  <hr />
+                 
                   {questions.map((questionObj) => {
                     return (
                       <div className="questionBox">

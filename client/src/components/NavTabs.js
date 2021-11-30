@@ -28,7 +28,7 @@ function NavTabs({ currentPage, handlePageChange }) {
   const { user, isAuthenticated, isLoading } = useAuth0();
   return (
     <>
-      <Navbar bg="light">
+      <Navbar className="nav">
         <Container className="navContainer">
           <Link className="d-inline-block align-top brand" to="/">
             <img
