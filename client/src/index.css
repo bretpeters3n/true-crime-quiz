@@ -49,17 +49,8 @@ a {
   text-align: center;
 }
 
-.nav-item {
-  margin: auto !important;
-  /* margin-right: 5px !important; */
-  padding: 4px;
-  font-family: "Helvetica Neue";
-  font-weight: 400;
-}
 
-.nav-item:hover {
-  background-color: red;
-}
+
 
 .drop-item {
   color: rgb(31, 31, 31);
@@ -78,11 +69,20 @@ a {
   color: rgb(31, 31, 31);
 }
 
+.nav-item {
+  margin: auto !important;
+  /* margin-right: 5px !important; */
+  padding: 4px;
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+}
+
 .nav-item:active,
 .nav-item:visited,
 .nav-item:link {
   text-decoration: none;
   color: rgb(31, 31, 31);
+  /* margin-right: 5px !important; */
 }
 
 .nav-item:hover {
@@ -178,7 +178,7 @@ a {
 }
 
 #login-home{
-  color:rgb(255, 255, 255) !important;
+  color:rgb(255, 255, 255);
   width: 102px;
   background-color: #0d6efd;
   border-radius: .25rem;
@@ -353,9 +353,6 @@ hr {
 
 .ins-container {
   top: 100px;
-}
-
-.app-ins p {
 }
 
 .app-ins h2 {
