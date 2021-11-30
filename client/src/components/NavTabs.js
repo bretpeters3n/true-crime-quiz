@@ -42,8 +42,8 @@ function NavTabs({ currentPage, handlePageChange }) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-right">
-              <Link className="nav-item" to="/">Home &nbsp;</Link>
-              <Link className="nav-item" to="/addquestion">Add a Question</Link>
+              {user && <Link className="nav-item" to="/">Home &nbsp;</Link>}
+              {user && <Link className="nav-item" to="/addquestion">Add a Question</Link>}
               <NavDropdown
                 title={
                   <div className="nav-icon">
