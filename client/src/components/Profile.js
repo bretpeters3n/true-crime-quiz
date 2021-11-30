@@ -53,7 +53,7 @@ export default function Profile() {
         method: "DELETE",
       }).then(() => {
         console.log("removed");
-        window.location.reload(true);
+        // window.location.reload(true);
         // remove question from array
         // questions
         // setQuestions(data);
@@ -156,7 +156,9 @@ export default function Profile() {
                           <div>
                             <Button
                               variant="danger"
-                              onClick={() => deleteQuestionFromDB(questionObj._id)}
+                              onClick={() =>
+                                deleteQuestionFromDB(questionObj._id)
+                              }
                             >
                               Delete
                             </Button>
