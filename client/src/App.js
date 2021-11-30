@@ -14,7 +14,9 @@ import { UserContext, UserProvider } from "./utils/UserContext";
 import LoginSignUp from "./components/LoginSignUp";
 import Test from "./components/Login";
 import { Auth0Provider } from "@auth0/auth0-react";
+
 export default function App() {
+
   return (
     <Auth0Provider
       domain="dev-r9whaml0.us.auth0.com"

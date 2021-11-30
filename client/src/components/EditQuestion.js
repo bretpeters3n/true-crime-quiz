@@ -29,6 +29,7 @@ export default function EditQuestion(props) {
     console.log(data);
     
     setQuestionText(data.questionText);
+
     setAnswerText1(data.answerOptions[0]?.answerText);
     setAnswerText2(data.answerOptions[1]?.answerText);
     setAnswerText3(data.answerOptions[2]?.answerText);
@@ -37,6 +38,7 @@ export default function EditQuestion(props) {
     setCheckbox2(data.answerOptions[1]?.isCorrect);
     setCheckbox3(data.answerOptions[2]?.isCorrect);
     setCheckbox4(data.answerOptions[3]?.isCorrect);
+
   }
 
   useEffect(() => {
