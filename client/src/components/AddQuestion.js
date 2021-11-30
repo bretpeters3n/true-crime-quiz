@@ -18,11 +18,11 @@ export default function AddQuestion() {
   const [checkBox3, setCheckbox3] = useState(false);
   const [checkBox4, setCheckbox4] = useState(false);
 
-  async function grabQuestion(id) {
-    const response = await fetch(`/api/questions/question/${id}`);
-    const data = await response.json();
-    console.log(data);
-  }
+  // async function grabQuestion(id) {
+  //   const response = await fetch(`/api/questions/question/${id}`);
+  //   const data = await response.json();
+  //   console.log(data);
+  // }
 
   // grabQuestion("61a4330b3f77572bc7b39700");
 
