@@ -11,13 +11,26 @@ import { UserContext } from "../utils/UserContext";
 import logo from "../Nav-icons/tcq-logo-flat.png";
 import { LoginButton } from "./LoginButton";
 
+export const LoginButtonHome = () => {
+  const { loginWithRedirect, user, isAuthenticated, logout } = useAuth0();
+
+  return isAuthenticated
+      ? <a className="Login-LogoutBtn" onClick={() => logout({ returnTo: window.location.origin })}>
+          Log out
+      </a>
+      
+      : <a className="Login-LogoutBtn" onClick={() => loginWithRedirect()}>Log in</a>;
+
+};
+
+
 function NavTabs({ currentPage, handlePageChange }) {
   const { user, isAuthenticated, isLoading } = useAuth0();
   return (
     <>
       <Navbar bg="light">
         <Container className="navContainer">
-          <Navbar.Brand href="/">
+          <Link className="d-inline-block align-top brand" to="/">
             <img
               src={logo}
               width="auto"
@@ -25,7 +38,7 @@ function NavTabs({ currentPage, handlePageChange }) {
               className="d-inline-block align-top brand"
               alt="True Crime Quiz Logo"
             />
-          </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-right">
@@ -53,15 +66,13 @@ function NavTabs({ currentPage, handlePageChange }) {
                 }
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
-                <NavDropdown.Item href="/game">Game</NavDropdown.Item>
-                <Nav.Item>
-                <Link className="drop-item" to="/profile">Testy</Link>
-                </Nav.Item>
-                <NavDropdown.Item disabled href="#">Questions</NavDropdown.Item>
-                <NavDropdown.Divider />
+                {user && <Link className="dropdown-item" to="/profile">Profile</Link>}
+                {user && <Link className="dropdown-item" to="/game">Game</Link>}
+                {user && <NavDropdown.Item disabled href="#">Questions</NavDropdown.Item>}
+                {user && <NavDropdown.Divider />}
                 {/* <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item> */}
-                <LoginButton />
+
+                <LoginButtonHome />
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
