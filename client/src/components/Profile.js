@@ -41,15 +41,33 @@ export default function Profile() {
     }
     let id = user.sub;
     const response = await fetch(`/api/questions/${id}`);
-    const data = await response.json();
-    return data;
+    response.json().then((data) => {
+      setQuestions(data);
+    });
   };
 
-  useEffect(async () => {
-    let questionData = await getQuestionsByAuth();
-    setQuestions(questionData);
+  function deleteQuestionFromDB(id) {
+    console.log(id);
+
+    try {
+      fetch(`/api/questions/delete/${id}`, {
+        method: "DELETE",
+      }).then(() => {
+        console.log("removed");
+        // remove question from array
+        // questions
+        // setQuestions(data);
+      });
+    } catch (err) {
+      console.error("err.message:", err.message);
+    }
+  }
+
+  useEffect(() => {
+    let questionData = getQuestionsByAuth();
+
     console.log(questions);
-  }, [user]);
+  }, []);
 
   function makeQuestionCards() {}
 
@@ -119,9 +137,9 @@ export default function Profile() {
                 </form>
                 <div className="addedquestions">
                   <hr></hr>
-                 <p>Your Created Questions</p>
+                  <p>Your Created Questions</p>
 
-                  {questions.map((questionObj) => {
+                  {questions?.map((questionObj) => {
                     return (
                       <div className="questionBox">
                         {questionObj.questionText}
@@ -136,9 +154,12 @@ export default function Profile() {
                             </Link>
                           </div>
                           <div>
-                            <Link to="/profile">
-                              <Button variant="danger">Delete</Button>
-                            </Link>
+                            <Button
+                              variant="danger"
+                              onClick={deleteQuestionFromDB(questionObj._id)}
+                            >
+                              Delete
+                            </Button>
                           </div>
                         </div>
                       </div>
