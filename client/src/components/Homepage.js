@@ -10,7 +10,7 @@ export default function Homepage() {
   const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   return (
-    <>
+    <div>
       <div className="small-screen">
         <Link to="/profile">
           <Button variant="primary">test button</Button>
@@ -24,6 +24,7 @@ export default function Homepage() {
       </div>
 
 
+      {/* <div className="banner"></div> */}
       <div className="columns-container">
         <div className="sides">
           {/* ---WelcomeBox--- */}
@@ -67,7 +68,9 @@ export default function Homepage() {
             </div>}
           </div>
         </div>
+          {/* <div className="team"> </div> */}
       </div>
-    </>
+        {/* <footer>this is a test</footer> */}
+    </div>
   );
 }

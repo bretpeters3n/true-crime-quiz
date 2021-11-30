@@ -23,6 +23,10 @@ body::-webkit-scrollbar {
   color: #ffffff;
 }
 
+.nav{
+  background-color:rgb(237, 237, 237);
+}
+
 .brand {
   min-width: 20px;
 }
@@ -49,9 +53,6 @@ a {
   text-align: center;
 }
 
-
-
-
 .drop-item {
   color: rgb(31, 31, 31);
   width: 158px;
@@ -75,6 +76,7 @@ a {
   padding: 4px;
   font-family: "Helvetica Neue";
   font-weight: 400;
+  font-size: 16px;
 }
 
 .nav-item:active,
@@ -130,6 +132,7 @@ a {
 .columns-container {
   position: relative;
   display: flex;
+  top: 4px;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -202,6 +205,22 @@ a {
   justify-content: space-evenly;
 }
 
+.team {
+  position: absolute;
+  left: 147px;
+  top: 660px;
+  margin-bottom: 25px;
+  background-color: #252d4a;
+  width: 1236px;
+  min-height: 200px;
+  height: 300px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  /* display: flex;
+  justify-content: space-evenly; */
+}
+
 .align-vertical {
   display: flex;
   flex-direction: column;
@@ -222,6 +241,15 @@ a {
   justify-content: space-evenly;
 }
 
+footer{
+  position: inline-block;
+  top: 900px;
+  color: black;
+  text-align: center;
+  background-color: #81b1ce;
+
+}
+
 h4 {
   display: none;
 }
@@ -238,6 +266,13 @@ h3 {
 
 input {
   color: #000;
+  border-radius: 10px;
+  padding: 7px;
+}
+
+.bio{
+  resize: none;
+  padding: 7px;
 }
 
 form {
@@ -263,7 +298,6 @@ form {
   resize: none;
   padding: 7px;
   color: black;
-  resize: none;
   height: 70px;
 }
 
@@ -319,6 +353,7 @@ hr {
   width: 400px;
   min-height: 200px;
   height: min-content;
+  resize: vertical;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
