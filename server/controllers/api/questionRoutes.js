@@ -48,7 +48,7 @@ router.put("/update/:id", (req, res) => {
     },
     {
       questionText: req.body.questionText,
-      answerOptions: [req.body.answerOptions],
+      answerOptions: req.body.answerOptions,
     },
     (error, edited) => {
       if (error) {
