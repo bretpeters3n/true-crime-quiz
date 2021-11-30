@@ -232,7 +232,7 @@ a {
 .addQuestion-app {
   background-color: #252d4a;
   width: 400px;
-  min-height: 200px;
+  min-height: 400px;
   height: 48vh;
   border-radius: 15px;
   padding: 20px;
@@ -294,6 +294,7 @@ form {
 }
 
 .yourQuestion {
+  min-height: 50px;
   border-radius: 12px;
   resize: none;
   padding: 7px;
