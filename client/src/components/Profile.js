@@ -85,28 +85,42 @@ export default function Profile() {
             <div className="columns-container">
               <div className="app-profile-questions">
                 <form className="form">
-                  <h3>Profile</h3>
+                  {/* <h3>Profile</h3> */}
+                  &nbsp;
+                  <img 
+                  width="150"
+                  height="150"
+                  className="profilePic" 
+                  src={user.picture}  
+                  alt="profile picture"
+                  />
+                  &nbsp;
                   <label className="vertAlign">
                     Name
                     <input
-                      value={value.firstName}
+                      className="textBoxes"
+                      value={user.name}
                       name="nameText"
                       onChange={handleInputChange}
                       type="text"
-                      placeholder="John Doe"
+                      readOnly
                     />
+                    &nbsp;
                   </label>
                   <label className="vertAlign">
                     Email
                     <input
-                      value={emailText}
+                      className="textBoxes"
+                      value={user.email}
                       name="emailText"
-                      onChange={handleInputChange}
+                      // onChange={handleInputChange}
                       type="email"
-                      placeholder="youremail@email.com"
+                      readOnly
                     />
                   </label>
-                  <label className="vertAlign">
+                  &nbsp;
+                  &nbsp;
+                  {/* <label className="vertAlign">
                     Password
                     <input
                       value={passwordText}
@@ -115,18 +129,8 @@ export default function Profile() {
                       type="password"
                       placeholder="password"
                     />
-                  </label>
-                  <label className="vertAlign">
-                    Bio
-                    <textarea
-                      className="bio"
-                      value={bioText}
-                      name="bioText"
-                      onChange={handleInputChange}
-                      type="text"
-                      placeholder="Your bio goes here"
-                    />
-                  </label>
+                  </label> */}
+
                   <Button
                     type="button"
                     variant="success"
@@ -135,8 +139,8 @@ export default function Profile() {
                     Submit
                   </Button>
                 </form>
-                <div className="addedquestions">
                   <hr></hr>
+                <div className="addedquestions">
                   <p>Your Created Questions</p>
 
                   {questions?.map((questionObj) => {

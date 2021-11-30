@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow-y: scroll;
+  overflow-y: none;
   background-color: #7cc6fe;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
+  /* display: none; for Chrome, Safari, and Opera */
 }
 
 * {
@@ -256,6 +256,17 @@ h4 {
 
 h3 {
   font-weight: bolder;
+  text-align: center;
+}
+
+.profilePic{
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-left: auto;
+  margin-right: auto;
+  
+  border-radius: 100px;
+  position:relative;
 }
 
 .addQuestionIns {
@@ -291,6 +302,8 @@ form {
 .vertAlign {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  font-size: 18px;
 }
 
 .yourQuestion {
@@ -311,6 +324,25 @@ form {
 
 .submitBtn {
   margin-top: 10px;
+}
+
+.addedquestions{
+  overflow-y: scroll;
+}
+
+.addedquestions::-webkit-scrollbar {
+  width: 1em;
+}
+
+.addedquestions::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgb(0, 0, 0);
+  border-radius: 6px;
+}
+
+.addedquestions::-webkit-scrollbar-thumb {
+   background-color: royalblue;
+   outline: 1px solid dimgray;
+   border-radius: 8px;
 }
 
 .addedquestions p{
@@ -342,7 +374,7 @@ hr {
 }
 
 .questionBox {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 7px;
   margin: 8px;
   padding: 8px;
@@ -350,6 +382,7 @@ hr {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.488);
 }
 
 .questionBoxControls {
@@ -362,6 +395,7 @@ hr {
   width: 400px;
   min-height: 200px;
   height: min-content;
+  max-height: 80vh;
   resize: vertical;
   border-radius: 15px;
   padding: 20px;
@@ -595,7 +629,12 @@ button svg {
   justify-content: space-between; */
 }
 
+.textBoxes{
+  text-align: center;
+}
+
 .app-profile input,
 textarea {
   border-radius: 12px;
+  text-align: center;
 }

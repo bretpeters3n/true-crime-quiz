@@ -4,7 +4,6 @@ import { useState } from "react";
 import { UserContext } from "../utils/UserContext";
 import { useAuth0 } from "@auth0/auth0-react";
 import { QuestionCard } from "./QuestionCard.js";
-
 export default function AddQuestion() {
   const { user, isAuthenticated } = useAuth0();
 
@@ -56,7 +55,9 @@ export default function AddQuestion() {
 
     if (response.ok) {
       document.location.replace("/");
-      alert("youre in!");
+      alert("All set!");
+      // <Alert variant="success">You're all set!</Alert>
+
     } else {
       alert("Failed to submit question, try again!");
     }
