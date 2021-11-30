@@ -30,7 +30,7 @@ export default function Homepage() {
           {/* ---WelcomeBox--- */}
           <div
             className="app welcome"
-            children={`Welcome ${isAuthenticated ? user.given_name : ""}`}
+            children={`Welcome Detective ${isAuthenticated ? user.given_name : ""} 🕵🏼‍♂️`}
           />
           {/* <img className="app" src={`${isAuthenticated ? user.picture : "?"}`}/> */}
           {/* ---HighScoresBox--- */}
@@ -39,21 +39,25 @@ export default function Homepage() {
         {/* ---InstructionsBox--- */}
         <div className="app-ins">
           <div className="ins-container">
-            <h2>Instructions</h2>
+            <h2>Game Instructions</h2>
             <p>
-              Aliquam pellentesque sodales commodo. Aenean eu interdum enim.
-              Aenean at purus rhoncus, mollis est eu, venenatis magna.
-              Pellentesque posuere placerat lectus, id aliquam sapien varius
-              non. Donec vulputate, orci a iaculis consectetur, ante nulla
-              pretium est, quis accumsan risus diam nec ante. Suspendisse dictum
-              fermentum
+              Do you think of yourself as a detective?<br></br>
+              Then try solve these questions!<br></br>
+              The quiz will run through 5 questions pertaining to true crime and true crime content. <br></br>
+              Click the Start Game button to start answering crime questions!
             </p>
+            <hr></hr>
+            <h2>Think you know True Crime?</h2>
+            <p>Then log in to add, edit or delete your own questions!</p><br></br>
+            {/* <Link to="/addquestion">
+                <Button variant="primary">Click to Add Questions</Button>
+              </Link> */}
           </div>
         </div>
         <div className="sides">
           {/* ---Login/SignupBox--- */}
           <div className="app-large">
-            <h2>Please Log in to play</h2>
+            <h2>Please Log in to Play</h2>
             <LoginButton id="login-home" className="btn"></LoginButton>
             <a className="privacy" href="#">Privacy Policy</a>
           </div>

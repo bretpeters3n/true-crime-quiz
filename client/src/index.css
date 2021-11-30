@@ -129,6 +129,10 @@ a {
   display: none;
 }
 
+p{
+  text-align: center;
+}
+
 .columns-container {
   position: relative;
   display: flex;
@@ -435,6 +439,7 @@ hr {
 
 .app-ins h2 {
   font-weight: bold;
+  text-align: center;
 }
 
 .appGame {
@@ -520,6 +525,8 @@ hr {
 .incorrect {
   background-color: #ff3333;
 }
+
+
 
 button:hover {
   background-color: #555e7d;
