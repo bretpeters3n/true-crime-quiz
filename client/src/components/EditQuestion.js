@@ -106,7 +106,6 @@ export default function EditQuestion(props) {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     writeQuestionToDb(questionId);
-
     setQuestionText("");
     setAnswerText1("");
     setAnswerText2("");
