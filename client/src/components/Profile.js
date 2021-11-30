@@ -118,8 +118,6 @@ export default function Profile() {
                   </Button>
                 </form>
 
-                <div>
-
                 <div className="addedquestions">
                   <hr></hr>
                  <p>Your Created Questions</p>

@@ -27,15 +27,16 @@ export default function EditQuestion(props) {
     const response = await fetch(`/api/questions/question/${id}`);
     const data = await response.json();
     console.log(data);
+    
     setQuestionText(data.questionText);
-    setAnswerText1(data.answerOptions[0].answerText[0]);
-    setAnswerText2(data.answerOptions[0].answerText[1]);
-    setAnswerText3(data.answerOptions[0].answerText[2]);
-    setAnswerText4(data.answerOptions[0].answerText[3]);
-    setCheckbox1(data.answerOptions[0].isCorrect[0]);
-    setCheckbox2(data.answerOptions[0].isCorrect[1]);
-    setCheckbox3(data.answerOptions[0].isCorrect[2]);
-    setCheckbox4(data.answerOptions[0].isCorrect[3]);
+    setAnswerText1(data.answerOptions[0]?.answerText);
+    setAnswerText2(data.answerOptions[1]?.answerText);
+    setAnswerText3(data.answerOptions[2]?.answerText);
+    setAnswerText4(data.answerOptions[3]?.answerText);
+    setCheckbox1(data.answerOptions[0]?.isCorrect);
+    setCheckbox2(data.answerOptions[1]?.isCorrect);
+    setCheckbox3(data.answerOptions[2]?.isCorrect);
+    setCheckbox4(data.answerOptions[3]?.isCorrect);
   }
 
   useEffect(() => {
