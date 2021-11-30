@@ -1,12 +1,16 @@
 import * as React from "react";
 import Button from "react-bootstrap/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { UserContext } from "../utils/UserContext";
 import { useAuth0 } from "@auth0/auth0-react";
 import { QuestionCard } from "./QuestionCard.js";
+import { useLocation } from "react-router-dom";
 
 export default function EditQuestion(props) {
   const { user, isAuthenticated } = useAuth0();
+
+  const location = useLocation();
+  const { questionId } = location.state;
 
   const [questionText, setQuestionText] = useState("");
   const [answerText1, setAnswerText1] = useState("");
@@ -24,21 +28,24 @@ export default function EditQuestion(props) {
     const data = await response.json();
     console.log(data);
     setQuestionText(data.questionText);
-    setAnswerText1(data.answerOptions[0]);
-    setAnswerText2(data.answerText2);
-    setAnswerText3(data.answerText3);
-    setAnswerText4(data.answerText4);
-    setCheckbox1(data.checkBox1);
-    setCheckbox2(data.checkBox2);
-    setCheckbox3(data.checkBox3);
-    setCheckbox4(data.checkBox4);
+    setAnswerText1(data.answerOptions[0].answerText[0]);
+    setAnswerText2(data.answerOptions[0].answerText[1]);
+    setAnswerText3(data.answerOptions[0].answerText[2]);
+    setAnswerText4(data.answerOptions[0].answerText[3]);
+    setCheckbox1(data.answerOptions[0].isCorrect[0]);
+    setCheckbox2(data.answerOptions[0].isCorrect[1]);
+    setCheckbox3(data.answerOptions[0].isCorrect[2]);
+    setCheckbox4(data.answerOptions[0].isCorrect[3]);
   }
 
-  grabQuestion("61a53b7cc51c0381f368d902");
+  useEffect(() => {
+    console.log(questionId);
+    grabQuestion(questionId);
+  }, []);
 
-  async function writeQuestionToDb() {
-    const response = await fetch("/api/questions/new", {
-      method: "POST",
+  async function writeQuestionToDb(id) {
+    const response = await fetch(`/api/questions/update/${id}`, {
+      method: "PUT",
       body: JSON.stringify({
         questionText: questionText,
         answerOptions: [
@@ -98,7 +105,7 @@ export default function EditQuestion(props) {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    writeQuestionToDb();
+    writeQuestionToDb(questionId);
 
     setQuestionText("");
     setAnswerText1("");
