@@ -117,9 +117,6 @@ export default function Profile() {
                     Submit
                   </Button>
                 </form>
-
-                <div>
-
                 <div className="addedquestions">
                   <hr></hr>
                  <p>Your Created Questions</p>
