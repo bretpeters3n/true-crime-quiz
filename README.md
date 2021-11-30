@@ -19,5 +19,11 @@ This project is created with:
 - Mongo JS version: 3.1.0
 - Mongoose version: 6.0.13
 - Nodemon version: 2.0.15
-- Path version" 0.12.7
+- Path version: 0.12.7
 ## 3. Setup
+To run this project, install it locally using npm
+- $ npm install express
+- $ npm install mongodb
+- $ npm install mongoose
+- $ npm install nodemon
+
