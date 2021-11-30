@@ -109,28 +109,27 @@ export default function Profile() {
                       placeholder="Your bio goes here"
                     />
                   </label>
-                  <Button
-                    type="button"
-                    variant="success"
-                    onClick={handleFormSubmit}
-                  >
+                  <Button type="button" variant="success" onClick={handleFormSubmit}>
                     Submit
                   </Button>
                 </form>
+
                 <div className="addedquestions">
                   <hr></hr>
                  <p>Your Created Questions</p>
-
                   {questions.map((questionObj) => {
                     return (
                       <div className="questionBox">
                         {questionObj.questionText}
-                        {/* {questionObj._id} */}
                         <div className="questionBoxControls">
                           <div>
                             <Link
-                              to="/editquestion"
-                              state={{ questionId: questionObj._id }}
+                              to={{
+                                pathname: "/editquestion",
+                                state: {
+                                  id: "61a53b7cc51c0381f368d902",
+                                },
+                              }}
                             >
                               <Button variant="primary">Edit</Button>
                             </Link>
