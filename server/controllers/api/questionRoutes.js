@@ -41,9 +41,14 @@ router.get("/:id", ({ params }, res) => {
 });
 
 router.put("/update/:id", (req, res) => {
+  console.log(res);
   Question.findByIdAndUpdate(
     {
       _id: mongojs.ObjectId(req.params.id),
+    },
+    {
+      questionText: req.body.questionText,
+      answerOptions: [req.body.answerOptions],
     },
     (error, edited) => {
       if (error) {
