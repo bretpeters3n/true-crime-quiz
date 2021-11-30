@@ -57,16 +57,16 @@ export default function Homepage() {
             <LoginButton id="login-home" className="btn"></LoginButton>
             <a className="privacy" href="#">Privacy Policy</a>
           </div>
-          <div className="app">
+          {user && <div className="app">
             {/* ---GameBox--- */}
-             {user && <div className="align-vertical">
+             <div className="align-vertical">
               Let's get started.
               <br />
               <Link to="/game">
                 <Button variant="primary">Start Game</Button>
               </Link>
-            </div>}
-          </div>
+            </div>
+          </div>}
         </div>
           {/* <div className="team"> </div> */}
       </div>

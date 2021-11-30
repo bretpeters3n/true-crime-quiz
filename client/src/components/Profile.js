@@ -113,8 +113,9 @@ export default function Profile() {
                     Submit
                   </Button>
                 </form>
-                <div>
-                 
+                <div className="addedquestions">
+                  <hr></hr>
+                 <p>Your Created Questions</p>
                   {questions.map((questionObj) => {
                     return (
                       <div className="questionBox">
@@ -134,7 +135,7 @@ export default function Profile() {
                           </div>
                           <div>
                             <Link to="/profile">
-                              <Button variant="primary">Delete</Button>
+                              <Button variant="danger">Delete</Button>
                             </Link>
                           </div>
                         </div>
