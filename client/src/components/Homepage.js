@@ -8,7 +8,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import TCD from "../assets/TCDatabase-homepage-square_v2.jpg";
 
 export default function Homepage() {
-  const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { user, isAuthenticated, loginWithRedirect, logout} = useAuth0();
 
   return (
     <div>
@@ -28,12 +28,13 @@ export default function Homepage() {
       <div className="columns-container">
         <div className="sides">
           {/* ---WelcomeBox--- */}
-          <div
+          {user && <div
             className="app welcome"
             children={`Welcome Detective ${
-              isAuthenticated ? user.given_name : ""
-            } 🕵🏼‍♂️`}
-          />
+              (isAuthenticated && (user.given_name != undefined)) ? user.given_name : ""
+            
+            }🕵🏼‍♂️`}
+          />}
           {/* <img className="app" src={`${isAuthenticated ? user.picture : "?"}`}/> */}
           {/* ---HighScoresBox--- */}
           <div className="app large2">
