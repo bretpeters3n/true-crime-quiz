@@ -197,7 +197,6 @@ p{
 }
 
 .large2 {
-  margin-top: 15px;
   background-color: #252d4a;
   width: 400px;
   min-height: 200px;
@@ -417,6 +416,7 @@ hr {
   font-weight: 600;
   font-size: 20px;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .app-ins {
