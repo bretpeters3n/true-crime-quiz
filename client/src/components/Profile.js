@@ -53,7 +53,7 @@ export default function Profile() {
         method: "DELETE",
       }).then(() => {
         console.log("removed");
-        // window.location.reload(true);
+        window.location.reload(true);
         // remove question from array
         // questions
         // setQuestions(data);
@@ -87,12 +87,12 @@ export default function Profile() {
                 <form className="form">
                   {/* <h3>Profile</h3> */}
                   &nbsp;
-                  <img 
-                  width="150"
-                  height="150"
-                  className="profilePic" 
-                  src={user.picture}  
-                  alt="profile picture"
+                  <img
+                    width="150"
+                    height="150"
+                    className="profilePic"
+                    src={user.picture}
+                    alt="profile picture"
                   />
                   &nbsp;
                   <label className="vertAlign">
@@ -118,8 +118,7 @@ export default function Profile() {
                       readOnly
                     />
                   </label>
-                  &nbsp;
-                  &nbsp;
+                  &nbsp; &nbsp;
                   {/* <label className="vertAlign">
                     Password
                     <input
@@ -130,16 +129,15 @@ export default function Profile() {
                       placeholder="password"
                     />
                   </label> */}
-
-                  <Button
+                  {/* <Button
                     type="button"
                     variant="success"
                     onClick={handleFormSubmit}
                   >
                     Submit
-                  </Button>
+                  </Button> */}
                 </form>
-                  <hr></hr>
+                <hr></hr>
                 <div className="addedquestions">
                   <p>Your Created Questions</p>
 
