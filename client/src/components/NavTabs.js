@@ -42,9 +42,8 @@ function NavTabs({ currentPage, handlePageChange }) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-right">
-              {user && <Link className="nav-item" to="/">Home &nbsp;</Link>}
-              {user && <Link className="nav-item" to="/addquestion">Add a Question</Link>}
-              <NavDropdown
+              {!user && <LoginButtonHome />}
+              {user && <NavDropdown
                 title={
                   <div className="nav-icon">
                     <img
@@ -54,26 +53,26 @@ function NavTabs({ currentPage, handlePageChange }) {
                         (event.target.style.display = "inline-block")
                       }
                       alt="user pic"
-                    />
+                      />
                     <img
                       className="thumbnail-img"
                       src={`${!isAuthenticated ? Test : ""}`}
                       onError={(event) => (event.target.style.display = "none")}
                       alt="test pic"
-                    />
+                      />
                     &#8964;
                   </div>
                 }
                 id="basic-nav-dropdown"
-              >
+                >
                 {user && <Link className="dropdown-item" to="/profile">Profile</Link>}
                 {user && <Link className="dropdown-item" to="/game">Game</Link>}
-                {user && <NavDropdown.Item disabled href="#">Questions</NavDropdown.Item>}
+                {user && <Link className="dropdown-item" to="/addquestion">Add a Question</Link>}
                 {user && <NavDropdown.Divider />}
                 {/* <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item> */}
 
                 <LoginButtonHome />
-              </NavDropdown>
+              </NavDropdown>}
             </Nav>
           </Navbar.Collapse>
         </Container>
