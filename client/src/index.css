@@ -397,7 +397,7 @@ hr {
 .app-profile-questions {
   background-color: #252d4a;
   width: 400px;
-  min-height: 200px;
+  min-height: 400px;
   height: min-content;
   max-height: 80vh;
   resize: vertical;
