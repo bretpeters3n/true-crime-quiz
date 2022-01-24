@@ -1,12 +1,13 @@
-# true-crime-quiz
+# True Crime Quiz
 
-Group project #3 - True Crime Quiz
+Mini quizzes on True Crime information.
 
 ## Table of Contents
 
 1. [Description](#description)
 2. [Technologies](#technologies)
 3. [Setup](#setup)
+3. [Getting Started](#getting-started)
 4. [Team Members](#team-members)
 5. [Screenshots](#screenshots)
 6. [Links](#links)
@@ -53,6 +54,35 @@ To run this project, install it locally using npm
 - $ npm install react-bootstrap
 - $ npm install react-router-dom
 - $ npm install styled-components
+
+<!-- GETTING STARTED -->
+## Getting Started
+These are instructions on setting up this project locally on your machine. To get a local copy up and running follow these simple example steps.
+
+
+### Prerequisites
+Make sure you have the latest installation of NPM (Node Package Manager) by following this step.
+* Install/update NPM
+   ```sh
+   npm install npm@latest -g
+   ```
+
+
+### Installation
+1. Clone the repo
+   ```sh
+   git clone https://github.com/bretpeters3n/true-crime-quiz.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run project
+   ```sh
+   npm run start
+   ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Team Members
 
