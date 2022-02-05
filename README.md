@@ -11,6 +11,7 @@ Mini quizzes on True Crime information.
 4. [Team Members](#team-members)
 5. [Screenshots](#screenshots)
 6. [Links](#links)
+7. [Guest Login](#guest-login)
 
 ## Description
 
@@ -100,3 +101,11 @@ Make sure you have the latest installation of NPM (Node Package Manager) by foll
 
 Heroku deployment:
 https://true-crime-quiz.herokuapp.com/
+
+## Guest Login
+
+Username / Email:
+email@email.com
+
+Password:
+Test1234!
